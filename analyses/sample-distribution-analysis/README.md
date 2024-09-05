@@ -13,6 +13,8 @@ bash run-sample-distribution-analysis.sh
 Parameters according to the project and analysis strategy will need to be specified in the following scripts:
 - `run-sample-distribution-analysis.R`: define `root_dir` and `params`, if necessary
 
+The module runs for the following tools: `R`, `pandoc` and `texlive`. Versions are defined in the `run-sample-distribution-analysis.sh`, and relative modules exist and run automatically from St Jude HPC. In addition, the `tidyverse` and `flextable` R packages are required to run the `01-sample-distribution-analysis.Rmd` script.
+
 
 ## Folder content
 

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  5 SEP 2024 12:06
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  5 SEP 2024 13:01
  restricted system commands enabled.
 **/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/sample-distribution-analysis/plots/Report-sample-dist
@@ -1198,10 +1198,7 @@ Overfull \hbox (59.68521pt too wide) in paragraph at lines 146--146
  [] 
  []
 
-(./Report-sample-distribution-analysis-2024-09-05.toc
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 8.
-)
+(./Report-sample-distribution-analysis-2024-09-05.toc)
 \tf@toc=\write4
 
 \openout4 = Report-sample-distribution-analysis-2024-09-05.toc
@@ -1231,9 +1228,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--173
 
  []
 
-[2] [3] [4] [5]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 331.
+[2]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 195.
+[3] [4] [5]
 luaotfload | cache : Lookup cache loaded from /home/achroni/.texlive2024/texmf-v
 ar/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 
@@ -1248,7 +1246,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 
 Package fontspec Info: DejaVuSans scale = 1.
 
-luaotfload | aux : font no 73 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 72 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: DejaVuSans/B scale = 0.7881120068080199.
@@ -1256,7 +1254,7 @@ Package fontspec Info: DejaVuSans/B scale = 0.7881120068080199.
 
 Package fontspec Info: DejaVuSans/B scale = 1.
 
-luaotfload | aux : font no 74 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 73 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: DejaVuSans/I scale = 0.7881120068080199.
@@ -1264,7 +1262,7 @@ Package fontspec Info: DejaVuSans/I scale = 0.7881120068080199.
 
 Package fontspec Info: DejaVuSans/I scale = 1.
 
-luaotfload | aux : font no 75 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 74 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: DejaVuSans/BI scale = 0.7881120068080199.
@@ -1272,7 +1270,7 @@ Package fontspec Info: DejaVuSans/BI scale = 0.7881120068080199.
 
 Package fontspec Info: DejaVuSans/BI scale = 1.
 
-luaotfload | aux : font no 76 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 75 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: Font family 'DejaVuSans(0)' created for font 'DejaVu
@@ -1300,29 +1298,29 @@ ge=dflt;+tlig;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/DejaVuSans(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 351.
+(Font)              scaled to size 12.0pt on input line 350.
 
 Package fontspec Info: DejaVuSans scale = 0.9999976748565969.
 
 
 Package fontspec Info: DejaVuSans scale = 0.9999976748565969.
 
-luaotfload | aux : font no 84 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 83 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: DejaVuSans/B scale = 0.9999976748565969.
 
-luaotfload | aux : font no 85 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 84 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: DejaVuSans/I scale = 0.9999976748565969.
 
-luaotfload | aux : font no 86 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 85 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: DejaVuSans/BI scale = 0.9999976748565969.
 
-luaotfload | aux : font no 87 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 86 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
@@ -1350,12 +1348,12 @@ cript=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/DejaVuSans(1)/m/n on input line 351.
+(Font)                  TU/lmr/m/n --> TU/DejaVuSans(1)/m/n on input line 350.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/lmr/m/it --> TU/DejaVuSans(1)/m/it on input line 351
+(Font)                  TU/lmr/m/it --> TU/DejaVuSans(1)/m/it on input line 350
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/lmr/bx/n --> TU/DejaVuSans(1)/b/n on input line 351.
+(Font)                  TU/lmr/bx/n --> TU/DejaVuSans(1)/b/n on input line 350.
 
 
 Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
@@ -1466,7 +1464,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 439--439
+Overfull \hbox (34.36195pt too wide) in paragraph at lines 437--437
 \TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
  []
 
@@ -1519,7 +1517,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 445--445
+Overfull \hbox (34.36195pt too wide) in paragraph at lines 443--443
 \TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
  []
 
@@ -1764,7 +1762,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 509--509
+Overfull \hbox (34.36195pt too wide) in paragraph at lines 506--506
 \TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
  []
 
@@ -1817,7 +1815,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (54.06747pt too wide) in alignment at lines 503--511
+Overfull \hbox (54.06747pt too wide) in alignment at lines 500--508
  [][][][][][][][][] 
  []
 
@@ -1828,7 +1826,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 515--515
+Overfull \hbox (34.36195pt too wide) in paragraph at lines 512--512
 \TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
  []
 
@@ -1881,7 +1879,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (54.06747pt too wide) in alignment at lines 511--517
+Overfull \hbox (54.06747pt too wide) in alignment at lines 508--514
  [][][][][][][][][] 
  []
 
@@ -1898,7 +1896,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.15688pt too wide) in paragraph at lines 521--521
+Overfull \hbox (34.15688pt too wide) in paragraph at lines 518--518
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH2W47P7DG[]|  
  []
 
@@ -1957,7 +1955,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.7682pt too wide) in paragraph at lines 527--527
+Overfull \hbox (29.7682pt too wide) in paragraph at lines 524--524
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH5HCKPC97[]|  
  []
 
@@ -2016,7 +2014,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.55922pt too wide) in paragraph at lines 533--533
+Overfull \hbox (30.55922pt too wide) in paragraph at lines 530--530
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHAY4GX4AN[]|  
  []
 
@@ -2129,7 +2127,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.09438pt too wide) in paragraph at lines 545--545
+Overfull \hbox (32.09438pt too wide) in paragraph at lines 542--542
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHBV3Q6UVR[]|  
  []
 
@@ -2188,7 +2186,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (26.5807pt too wide) in paragraph at lines 551--551
+Overfull \hbox (26.5807pt too wide) in paragraph at lines 548--548
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHC70DZRJS[]|  
  []
 
@@ -2247,7 +2245,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (0.77016pt too wide) in paragraph at lines 557--557
+Overfull \hbox (0.77016pt too wide) in paragraph at lines 554--554
 \TU/DejaVuSans(0)/m/n/12 CLGFJTIG[]|  
  []
 
@@ -2306,7 +2304,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.17055pt too wide) in paragraph at lines 563--563
+Overfull \hbox (32.17055pt too wide) in paragraph at lines 560--560
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHCN03RCVD[]|  
  []
 
@@ -2419,7 +2417,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.41469pt too wide) in paragraph at lines 575--575
+Overfull \hbox (28.41469pt too wide) in paragraph at lines 572--572
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHI52BLNWK[]|  
  []
 
@@ -2586,7 +2584,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (3.1725pt too wide) in paragraph at lines 593--593
+Overfull \hbox (3.1725pt too wide) in paragraph at lines 590--590
 \TU/DejaVuSans(0)/m/n/12 FORRR7C[]|  
  []
 
@@ -2645,7 +2643,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (22.86586pt too wide) in paragraph at lines 599--599
+Overfull \hbox (22.86586pt too wide) in paragraph at lines 596--596
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHOY05OJJN[]|  
  []
 
@@ -2704,7 +2702,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.52016pt too wide) in paragraph at lines 605--605
+Overfull \hbox (31.52016pt too wide) in paragraph at lines 602--602
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHQBOPS9FD[]|  
  []
 
@@ -2817,7 +2815,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (27.3014pt too wide) in paragraph at lines 617--617
+Overfull \hbox (27.3014pt too wide) in paragraph at lines 614--614
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHVIS5Q8HX[]|  
  []
 
@@ -2876,7 +2874,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.27992pt too wide) in paragraph at lines 623--623
+Overfull \hbox (34.27992pt too wide) in paragraph at lines 620--620
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHWS0NRZVA[]|  
  []
 
@@ -2935,7 +2933,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.94203pt too wide) in paragraph at lines 629--629
+Overfull \hbox (28.94203pt too wide) in paragraph at lines 626--626
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHXIKCWNKY[]|  
  []
 
@@ -3048,7 +3046,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.84828pt too wide) in paragraph at lines 641--641
+Overfull \hbox (31.84828pt too wide) in paragraph at lines 638--638
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHZW7GYEF9[]|  
  []
 
@@ -3107,7 +3105,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.62172pt too wide) in paragraph at lines 647--647
+Overfull \hbox (32.62172pt too wide) in paragraph at lines 644--644
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH0H5WYREP[]|  
  []
 
@@ -3166,7 +3164,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.49477pt too wide) in paragraph at lines 653--653
+Overfull \hbox (30.49477pt too wide) in paragraph at lines 650--650
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH2HPPEEKM[]|  
  []
 
@@ -3225,7 +3223,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (27.78773pt too wide) in paragraph at lines 659--659
+Overfull \hbox (27.78773pt too wide) in paragraph at lines 656--656
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH51B396IW[]|  
  []
 
@@ -3284,7 +3282,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.7682pt too wide) in paragraph at lines 665--665
+Overfull \hbox (29.7682pt too wide) in paragraph at lines 662--662
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH5HCKPC97[]|  
  []
 
@@ -3343,7 +3341,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.6432pt too wide) in paragraph at lines 671--671
+Overfull \hbox (28.6432pt too wide) in paragraph at lines 668--668
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH98QNKIUU[]|  
  []
 
@@ -3402,7 +3400,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (2.10023pt too wide) in paragraph at lines 677--677
+Overfull \hbox (2.10023pt too wide) in paragraph at lines 674--674
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH9YML- 
  []
 
@@ -3461,7 +3459,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (23.8561pt too wide) in paragraph at lines 683--683
+Overfull \hbox (23.8561pt too wide) in paragraph at lines 680--680
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHA6KC56J6[]|  
  []
 
@@ -3520,7 +3518,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (10.56117pt too wide) in paragraph at lines 689--689
+Overfull \hbox (10.56117pt too wide) in paragraph at lines 686--686
 \TU/DejaVuSans(0)/m/n/12 BKS7QSFO[]|  
  []
 
@@ -3579,7 +3577,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (26.5807pt too wide) in paragraph at lines 695--695
+Overfull \hbox (26.5807pt too wide) in paragraph at lines 692--692
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHC70DZRJS[]|  
  []
 
@@ -3638,7 +3636,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.17055pt too wide) in paragraph at lines 701--701
+Overfull \hbox (32.17055pt too wide) in paragraph at lines 698--698
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHCN03RCVD[]|  
  []
 
@@ -3805,7 +3803,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (16.4557pt too wide) in paragraph at lines 719--719
+Overfull \hbox (16.4557pt too wide) in paragraph at lines 716--716
 \TU/DejaVuSans(0)/m/n/12 HZH67WMF[]|  
  []
 
@@ -3864,7 +3862,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (25.95375pt too wide) in paragraph at lines 725--725
+Overfull \hbox (25.95375pt too wide) in paragraph at lines 722--722
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHI8CC7QT8[]|  
  []
 
@@ -3977,7 +3975,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (3.41273pt too wide) in paragraph at lines 737--737
+Overfull \hbox (3.41273pt too wide) in paragraph at lines 734--734
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHKVQE- 
  []
 
@@ -4036,7 +4034,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (25.6139pt too wide) in paragraph at lines 743--743
+Overfull \hbox (25.6139pt too wide) in paragraph at lines 740--740
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHKYUIYAME[]|  
  []
 
@@ -4149,7 +4147,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.38344pt too wide) in paragraph at lines 755--755
+Overfull \hbox (30.38344pt too wide) in paragraph at lines 752--752
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHUMKP2L6V[]|  
  []
 
@@ -4208,7 +4206,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.51039pt too wide) in paragraph at lines 761--761
+Overfull \hbox (29.51039pt too wide) in paragraph at lines 758--758
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHXTBTQ5ZT[]|  
  []
 
@@ -4267,7 +4265,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.69008pt too wide) in paragraph at lines 767--767
+Overfull \hbox (34.69008pt too wide) in paragraph at lines 764--764
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH5QHZM4US[]|  
  []
 
@@ -4326,7 +4324,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.66664pt too wide) in paragraph at lines 773--773
+Overfull \hbox (28.66664pt too wide) in paragraph at lines 770--770
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHADL5OJME[]|  
  []
 
@@ -4385,7 +4383,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (5.57484pt too wide) in paragraph at lines 779--779
+Overfull \hbox (5.57484pt too wide) in paragraph at lines 776--776
 \TU/DejaVuSans(0)/m/n/12 BISK5KBU[]|  
  []
 
@@ -4444,7 +4442,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.13734pt too wide) in paragraph at lines 785--785
+Overfull \hbox (30.13734pt too wide) in paragraph at lines 782--782
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHBL7CDYRN[]|  
  []
 
@@ -4503,7 +4501,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.24867pt too wide) in paragraph at lines 791--791
+Overfull \hbox (30.24867pt too wide) in paragraph at lines 788--788
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHEOVURBMJ[]|  
  []
 
@@ -4562,7 +4560,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.5807pt too wide) in paragraph at lines 797--797
+Overfull \hbox (29.5807pt too wide) in paragraph at lines 794--794
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHEQG3P4FK[]|  
  []
 
@@ -4675,7 +4673,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.32875pt too wide) in paragraph at lines 809--809
+Overfull \hbox (29.32875pt too wide) in paragraph at lines 806--806
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHHW23UJ9P[]|  
  []
 
@@ -4734,7 +4732,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (25.23305pt too wide) in paragraph at lines 815--815
+Overfull \hbox (25.23305pt too wide) in paragraph at lines 812--812
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHJ59RLHSU[]|  
  []
 
@@ -4847,7 +4845,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.60805pt too wide) in paragraph at lines 827--827
+Overfull \hbox (31.60805pt too wide) in paragraph at lines 824--824
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHMI643DMD[]|  
  []
 
@@ -4960,7 +4958,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (12.13148pt too wide) in paragraph at lines 839--839
+Overfull \hbox (12.13148pt too wide) in paragraph at lines 836--836
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH77NRD- 
  []
 
@@ -5019,7 +5017,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (23.49867pt too wide) in paragraph at lines 845--845
+Overfull \hbox (23.49867pt too wide) in paragraph at lines 842--842
 []|[]\TU/DejaVuSans(0)/m/n/12 SJH8HIE3P0P[]|  
  []
 
@@ -5132,7 +5130,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.65492pt too wide) in paragraph at lines 857--857
+Overfull \hbox (31.65492pt too wide) in paragraph at lines 854--854
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHC1QST5GR[]|  
  []
 
@@ -5191,7 +5189,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (1.99477pt too wide) in paragraph at lines 863--863
+Overfull \hbox (1.99477pt too wide) in paragraph at lines 860--860
 \TU/DejaVuSans(0)/m/n/12 CYGKSDY[]|  
  []
 
@@ -5304,7 +5302,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.0768pt too wide) in paragraph at lines 875--875
+Overfull \hbox (32.0768pt too wide) in paragraph at lines 872--872
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHQS0D51KH[]|  
  []
 
@@ -5363,7 +5361,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.0807pt too wide) in paragraph at lines 881--881
+Overfull \hbox (31.0807pt too wide) in paragraph at lines 878--878
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHXVMEU21L[]|  
  []
 
@@ -5422,7 +5420,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (36.02602pt too wide) in paragraph at lines 887--887
+Overfull \hbox (36.02602pt too wide) in paragraph at lines 884--884
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHY4W1ZWCY[]|  
  []
 
@@ -5481,7 +5479,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (7.26234pt too wide) in paragraph at lines 893--893
+Overfull \hbox (7.26234pt too wide) in paragraph at lines 890--890
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHZ40PT- 
  []
 
@@ -5648,7 +5646,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.52016pt too wide) in paragraph at lines 911--911
+Overfull \hbox (31.52016pt too wide) in paragraph at lines 908--908
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHQBOPS9FD[]|  
  []
 
@@ -5761,7 +5759,7 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (27.3014pt too wide) in paragraph at lines 923--923
+Overfull \hbox (27.3014pt too wide) in paragraph at lines 920--920
 []|[]\TU/DejaVuSans(0)/m/n/12 SJHVIS5Q8HX[]|  
  []
 
@@ -5808,18 +5806,18 @@ Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (54.06747pt too wide) in alignment at lines 517--929
+Overfull \hbox (54.06747pt too wide) in alignment at lines 514--926
  [][][][][][][][][] 
  []
 
 [6] [7] [8] [9] [10]
-Overfull \hbox (144.49498pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (144.49498pt too wide) in paragraph at lines 1008--1008
 []\TU/lmtt/m/n/10 ## BLAS:   /research/rgs01/applications/hpcf/authorized_apps/r
 hel8_apps/lapack/3.10.1/install/lib64/libblas.so.3.10.1[] 
  []
 
 
-Overfull \hbox (154.99498pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (154.99498pt too wide) in paragraph at lines 1008--1008
 []\TU/lmtt/m/n/10 ## LAPACK: /research/rgs01/applications/hpcf/authorized_apps/r
 hel8_apps/lapack/3.10.1/install/lib64/liblapack.so.3.10.1[] 
  []
@@ -5832,22 +5830,22 @@ L3 programming layer <2024-03-14>
 )
 
 Here is how much of LuaTeX's memory you used:
- 21981 strings out of 476435
- 305430,1977958 words of node,token memory allocated
+ 21978 strings out of 476435
+ 305423,1977958 words of node,token memory allocated
  647 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 8 
 attribute, 73 glue_spec, 8 attribute_list, 1 write, 1 user_defined nodes
-   avail lists: 1:6,2:13727,3:2789,4:2620,5:358,6:1301,7:13183,8:20,9:12121,10:7
-,11:191
- 43640 multiletter control sequences out of 65536+600000
- 87 fonts using 39824351 bytes
+   avail lists: 1:3,2:13703,3:2789,4:2620,5:355,6:1301,7:13188,8:19,9:12121,10:7
+,11:196
+ 43637 multiletter control sequences out of 65536+600000
+ 86 fonts using 39698031 bytes
  90i,15n,129p,1714b,557s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/dejavu/DejaVuSans.ttf></research/rgs01/applications/hpcf/autho
 rized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/l
 mmono10-italic.otf></research/rgs01/applications/hpcf/authorized_apps/rhel8_apps
-/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><
-/research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/texlive/install/202
-4/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf></research/rgs01/appli
+/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf></
+research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/texlive/install/2024
+/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></research/rgs01/appli
 cations/hpcf/authorized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/op
 entype/public/lm/lmroman10-regular.otf></research/rgs01/applications/hpcf/author
 ized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/lm
@@ -5858,7 +5856,7 @@ xmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></research/rgs01/applica
 tions/hpcf/authorized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/open
 type/public/lm/lmroman17-regular.otf>
 Output written on Report-sample-distribution-analysis-2024-09-05.pdf (11 pages, 
-245607 bytes).
+245546 bytes).
 
 PDF statistics: 189 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams

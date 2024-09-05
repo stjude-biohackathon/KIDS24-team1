@@ -211,7 +211,7 @@ cat("  \n\\pagebreak  \n")
 ```
 
 
-# Number of samples per `Assay`
+# Number of samples per Assay
 
 ```{r table-1, echo=FALSE}
 df %>%
@@ -221,7 +221,7 @@ df %>%
   fontsize(size = 12, part = "all")
 ```
 
-# Number of samples per `cancer_type_brain` and `Assay`
+# Number of samples per brain cancer type and Assay
 
 ```{r table-2, echo=FALSE}
 df %>%
@@ -231,7 +231,7 @@ df %>%
   fontsize(size = 12, part = "all")
 ```
 
-# Number of samples per `cancer_type_brain`, `Assay`, and `SJUID`
+# Number of samples per brain cancer type, Assay, and SJUID
 
 ```{r table-3, echo=FALSE}
 df %>%
