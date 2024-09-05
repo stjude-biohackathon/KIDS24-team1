@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  5 SEP 2024 13:01
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  5 SEP 2024 13:46
  restricted system commands enabled.
 **/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/sample-distribution-analysis/plots/Report-sample-dist
@@ -1235,42 +1235,42 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 luaotfload | cache : Lookup cache loaded from /home/achroni/.texlive2024/texmf-v
 ar/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
-
-luaotfload | aux : font no 72 (nil) does not define feature smcp for script latn
- with language dflt
-
-Package fontspec Info: DejaVuSans/B scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans/B scale = 1.
 
 luaotfload | aux : font no 73 (nil) does not define feature smcp for script latn
  with language dflt
 
-Package fontspec Info: DejaVuSans/I scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans/B scale = 0.7881118402195612.
 
 
-Package fontspec Info: DejaVuSans/I scale = 1.
+Package fontspec Info: DejaVuSans/B scale = 1.
 
 luaotfload | aux : font no 74 (nil) does not define feature smcp for script latn
  with language dflt
 
-Package fontspec Info: DejaVuSans/BI scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans/I scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans/I scale = 1.
+
+luaotfload | aux : font no 75 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: DejaVuSans/BI scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans/BI scale = 1.
 
-luaotfload | aux : font no 75 (nil) does not define feature smcp for script latn
+luaotfload | aux : font no 76 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: Font family 'DejaVuSans(0)' created for font 'DejaVu
@@ -1298,29 +1298,29 @@ ge=dflt;+tlig;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/DejaVuSans(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 350.
+(Font)              scaled to size 11.0pt on input line 350.
 
-Package fontspec Info: DejaVuSans scale = 0.9999976748565969.
+Package fontspec Info: DejaVuSans scale = 0.99999746348046.
 
 
-Package fontspec Info: DejaVuSans scale = 0.9999976748565969.
-
-luaotfload | aux : font no 83 (nil) does not define feature smcp for script latn
- with language dflt
-
-Package fontspec Info: DejaVuSans/B scale = 0.9999976748565969.
+Package fontspec Info: DejaVuSans scale = 0.99999746348046.
 
 luaotfload | aux : font no 84 (nil) does not define feature smcp for script latn
  with language dflt
 
-Package fontspec Info: DejaVuSans/I scale = 0.9999976748565969.
+Package fontspec Info: DejaVuSans/B scale = 0.99999746348046.
 
 luaotfload | aux : font no 85 (nil) does not define feature smcp for script latn
  with language dflt
 
-Package fontspec Info: DejaVuSans/BI scale = 0.9999976748565969.
+Package fontspec Info: DejaVuSans/I scale = 0.99999746348046.
 
 luaotfload | aux : font no 86 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: DejaVuSans/BI scale = 0.99999746348046.
+
+luaotfload | aux : font no 87 (nil) does not define feature smcp for script latn
  with language dflt
 
 Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
@@ -1331,20 +1331,20 @@ Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976748565969]"name:DejaVuSans:mode=base;scri
-pt=latn;language=dflt;"
+(fontspec)             <->s*[0.99999746348046]"name:DejaVuSans:mode=base;script
+=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999976748565969]"name:DejaVuSans/B:mode=base;sc
-ript=latn;language=dflt;"
+(fontspec)             <->s*[0.99999746348046]"name:DejaVuSans/B:mode=base;scri
+pt=latn;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999976748565969]"name:DejaVuSans/I:mode=base;sc
-ript=latn;language=dflt;"
+(fontspec)             <->s*[0.99999746348046]"name:DejaVuSans/I:mode=base;scri
+pt=latn;language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999976748565969]"name:DejaVuSans/BI:mode=base;s
-cript=latn;language=dflt;"
+(fontspec)             <->s*[0.99999746348046]"name:DejaVuSans/BI:mode=base;scr
+ipt=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
@@ -1356,460 +1356,460 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  TU/lmr/bx/n --> TU/DejaVuSans(1)/b/n on input line 350.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 437--437
-\TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
+Overfull \hbox (26.98158pt too wide) in paragraph at lines 437--437
+\TU/DejaVuSans(0)/m/n/11 cer_type_brain[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 443--443
-\TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
+Overfull \hbox (26.98158pt too wide) in paragraph at lines 443--443
+\TU/DejaVuSans(0)/m/n/11 cer_type_brain[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 506--506
-\TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
+Overfull \hbox (26.98158pt too wide) in paragraph at lines 506--506
+\TU/DejaVuSans(0)/m/n/11 cer_type_brain[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
@@ -1820,60 +1820,60 @@ Overfull \hbox (54.06747pt too wide) in alignment at lines 500--508
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.36195pt too wide) in paragraph at lines 512--512
-\TU/DejaVuSans(0)/m/n/12 cer_type_brain[]|  
+Overfull \hbox (26.98158pt too wide) in paragraph at lines 512--512
+\TU/DejaVuSans(0)/m/n/11 cer_type_brain[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
@@ -1884,3923 +1884,3898 @@ Overfull \hbox (54.06747pt too wide) in alignment at lines 508--514
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.15688pt too wide) in paragraph at lines 518--518
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH2W47P7DG[]|  
+Overfull \hbox (26.7936pt too wide) in paragraph at lines 518--518
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH2W47P7DG[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.7682pt too wide) in paragraph at lines 524--524
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH5HCKPC97[]|  
+Overfull \hbox (22.77065pt too wide) in paragraph at lines 524--524
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH5HCKPC97[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.55922pt too wide) in paragraph at lines 530--530
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHAY4GX4AN[]|  
+Overfull \hbox (23.49574pt too wide) in paragraph at lines 530--530
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHAY4GX4AN[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.09438pt too wide) in paragraph at lines 542--542
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHBV3Q6UVR[]|  
+Overfull \hbox (24.90297pt too wide) in paragraph at lines 542--542
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHBV3Q6UVR[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (26.5807pt too wide) in paragraph at lines 548--548
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHC70DZRJS[]|  
+Overfull \hbox (19.84877pt too wide) in paragraph at lines 548--548
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHC70DZRJS[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (0.77016pt too wide) in paragraph at lines 554--554
-\TU/DejaVuSans(0)/m/n/12 CLGFJTIG[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (24.9728pt too wide) in paragraph at lines 560--560
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHCN03RCVD[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.17055pt too wide) in paragraph at lines 560--560
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHCN03RCVD[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (21.52992pt too wide) in paragraph at lines 572--572
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHI52BLNWK[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.41469pt too wide) in paragraph at lines 572--572
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHI52BLNWK[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (16.4435pt too wide) in paragraph at lines 596--596
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHOY05OJJN[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (3.1725pt too wide) in paragraph at lines 590--590
-\TU/DejaVuSans(0)/m/n/12 FORRR7C[]|  
+Overfull \hbox (24.3766pt too wide) in paragraph at lines 602--602
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHQBOPS9FD[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (22.86586pt too wide) in paragraph at lines 596--596
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHOY05OJJN[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (20.50941pt too wide) in paragraph at lines 614--614
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHVIS5Q8HX[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.52016pt too wide) in paragraph at lines 602--602
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHQBOPS9FD[]|  
+Overfull \hbox (26.90639pt too wide) in paragraph at lines 620--620
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHWS0NRZVA[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (27.3014pt too wide) in paragraph at lines 614--614
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHVIS5Q8HX[]|  
+Overfull \hbox (22.01332pt too wide) in paragraph at lines 626--626
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHXIKCWNKY[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.27992pt too wide) in paragraph at lines 620--620
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHWS0NRZVA[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (24.67738pt too wide) in paragraph at lines 638--638
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHZW7GYEF9[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.94203pt too wide) in paragraph at lines 626--626
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHXIKCWNKY[]|  
+Overfull \hbox (25.38637pt too wide) in paragraph at lines 644--644
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH0H5WYREP[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (31.84828pt too wide) in paragraph at lines 638--638
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHZW7GYEF9[]|  
+Overfull \hbox (23.43666pt too wide) in paragraph at lines 650--650
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH2HPPEEKM[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.62172pt too wide) in paragraph at lines 644--644
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH0H5WYREP[]|  
+Overfull \hbox (20.95522pt too wide) in paragraph at lines 656--656
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH51B396IW[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.49477pt too wide) in paragraph at lines 650--650
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH2HPPEEKM[]|  
+Overfull \hbox (22.77065pt too wide) in paragraph at lines 662--662
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH5HCKPC97[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (27.78773pt too wide) in paragraph at lines 656--656
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH51B396IW[]|  
+Overfull \hbox (21.7394pt too wide) in paragraph at lines 668--668
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH98QNKIUU[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.7682pt too wide) in paragraph at lines 662--662
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH5HCKPC97[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (17.35121pt too wide) in paragraph at lines 680--680
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHA6KC56J6[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.6432pt too wide) in paragraph at lines 668--668
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH98QNKIUU[]|  
+Overfull \hbox (5.1642pt too wide) in paragraph at lines 686--686
+\TU/DejaVuSans(0)/m/n/11 BKS7QSFO[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (2.10023pt too wide) in paragraph at lines 674--674
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH9YML- 
+Overfull \hbox (19.84877pt too wide) in paragraph at lines 692--692
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHC70DZRJS[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (23.8561pt too wide) in paragraph at lines 680--680
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHA6KC56J6[]|  
+Overfull \hbox (24.9728pt too wide) in paragraph at lines 698--698
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHCN03RCVD[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (10.56117pt too wide) in paragraph at lines 686--686
-\TU/DejaVuSans(0)/m/n/12 BKS7QSFO[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (10.56752pt too wide) in paragraph at lines 716--716
+\TU/DejaVuSans(0)/m/n/11 HZH67WMF[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (26.5807pt too wide) in paragraph at lines 692--692
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHC70DZRJS[]|  
+Overfull \hbox (19.27406pt too wide) in paragraph at lines 722--722
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHI8CC7QT8[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.17055pt too wide) in paragraph at lines 698--698
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHCN03RCVD[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (18.96254pt too wide) in paragraph at lines 740--740
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHKYUIYAME[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (16.4557pt too wide) in paragraph at lines 716--716
-\TU/DejaVuSans(0)/m/n/12 HZH67WMF[]|  
+Overfull \hbox (23.33461pt too wide) in paragraph at lines 752--752
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHUMKP2L6V[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (25.95375pt too wide) in paragraph at lines 722--722
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHI8CC7QT8[]|  
+Overfull \hbox (22.53432pt too wide) in paragraph at lines 758--758
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHXTBTQ5ZT[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (3.41273pt too wide) in paragraph at lines 734--734
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHKVQE- 
+Overfull \hbox (27.28236pt too wide) in paragraph at lines 764--764
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH5QHZM4US[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (25.6139pt too wide) in paragraph at lines 740--740
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHKYUIYAME[]|  
+Overfull \hbox (21.76088pt too wide) in paragraph at lines 770--770
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHADL5OJME[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (30.38344pt too wide) in paragraph at lines 752--752
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHUMKP2L6V[]|  
+Overfull \hbox (0.5934pt too wide) in paragraph at lines 776--776
+\TU/DejaVuSans(0)/m/n/11 BISK5KBU[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.51039pt too wide) in paragraph at lines 758--758
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHXTBTQ5ZT[]|  
+Overfull \hbox (23.10902pt too wide) in paragraph at lines 782--782
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHBL7CDYRN[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (34.69008pt too wide) in paragraph at lines 764--764
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH5QHZM4US[]|  
+Overfull \hbox (23.21107pt too wide) in paragraph at lines 788--788
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHEOVURBMJ[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (28.66664pt too wide) in paragraph at lines 770--770
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHADL5OJME[]|  
+Overfull \hbox (22.59877pt too wide) in paragraph at lines 794--794
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHEQG3P4FK[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (5.57484pt too wide) in paragraph at lines 776--776
-\TU/DejaVuSans(0)/m/n/12 BISK5KBU[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (22.36781pt too wide) in paragraph at lines 806--806
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHHW23UJ9P[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.13734pt too wide) in paragraph at lines 782--782
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHBL7CDYRN[]|  
+Overfull \hbox (18.61342pt too wide) in paragraph at lines 812--812
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHJ59RLHSU[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (30.24867pt too wide) in paragraph at lines 788--788
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHEOVURBMJ[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (24.45717pt too wide) in paragraph at lines 824--824
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHMI643DMD[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (29.5807pt too wide) in paragraph at lines 794--794
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHEQG3P4FK[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (6.60365pt too wide) in paragraph at lines 836--836
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH77NRD- 
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (29.32875pt too wide) in paragraph at lines 806--806
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHHW23UJ9P[]|  
+Overfull \hbox (17.02357pt too wide) in paragraph at lines 842--842
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJH8HIE3P0P[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (25.23305pt too wide) in paragraph at lines 812--812
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHJ59RLHSU[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (24.50014pt too wide) in paragraph at lines 854--854
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHC1QST5GR[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (31.60805pt too wide) in paragraph at lines 824--824
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHMI643DMD[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (24.88686pt too wide) in paragraph at lines 872--872
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHQS0D51KH[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (12.13148pt too wide) in paragraph at lines 836--836
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH77NRD- 
+Overfull \hbox (23.97377pt too wide) in paragraph at lines 878--878
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHXVMEU21L[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (23.49867pt too wide) in paragraph at lines 842--842
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJH8HIE3P0P[]|  
+Overfull \hbox (28.50697pt too wide) in paragraph at lines 884--884
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHY4W1ZWCY[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (31.65492pt too wide) in paragraph at lines 854--854
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHC1QST5GR[]|  
+Overfull \hbox (2.14027pt too wide) in paragraph at lines 890--890
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHZ40PT- 
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (1.99477pt too wide) in paragraph at lines 860--860
-\TU/DejaVuSans(0)/m/n/12 CYGKSDY[]|  
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
+
+
+Package fontspec Info: DejaVuSans scale = 1.
+
+
+Overfull \hbox (24.3766pt too wide) in paragraph at lines 908--908
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHQBOPS9FD[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Overfull \hbox (32.0768pt too wide) in paragraph at lines 872--872
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHQS0D51KH[]|  
+Overfull \hbox (20.50941pt too wide) in paragraph at lines 920--920
+[]|[]\TU/DejaVuSans(0)/m/n/11 SJHVIS5Q8HX[]|  
  []
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
 
 
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (31.0807pt too wide) in paragraph at lines 878--878
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHXVMEU21L[]|  
- []
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (36.02602pt too wide) in paragraph at lines 884--884
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHY4W1ZWCY[]|  
- []
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (7.26234pt too wide) in paragraph at lines 890--890
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHZ40PT- 
- []
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (31.52016pt too wide) in paragraph at lines 908--908
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHQBOPS9FD[]|  
- []
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Overfull \hbox (27.3014pt too wide) in paragraph at lines 920--920
-[]|[]\TU/DejaVuSans(0)/m/n/12 SJHVIS5Q8HX[]|  
- []
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
-
-
-Package fontspec Info: DejaVuSans scale = 1.
-
-
-Package fontspec Info: DejaVuSans scale = 0.7881120068080199.
+Package fontspec Info: DejaVuSans scale = 0.7881118402195612.
 
 
 Package fontspec Info: DejaVuSans scale = 1.
@@ -5830,16 +5805,16 @@ L3 programming layer <2024-03-14>
 )
 
 Here is how much of LuaTeX's memory you used:
- 21978 strings out of 476435
+ 21980 strings out of 476435
  305423,1977958 words of node,token memory allocated
  647 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 8 
 attribute, 73 glue_spec, 8 attribute_list, 1 write, 1 user_defined nodes
    avail lists: 1:3,2:13703,3:2789,4:2620,5:355,6:1301,7:13188,8:19,9:12121,10:7
 ,11:196
- 43637 multiletter control sequences out of 65536+600000
- 86 fonts using 39698031 bytes
- 90i,15n,129p,1714b,557s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 43639 multiletter control sequences out of 65536+600000
+ 87 fonts using 39829859 bytes
+ 90i,15n,129p,1714b,558s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/dejavu/DejaVuSans.ttf></research/rgs01/applications/hpcf/autho
 rized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/l
 mmono10-italic.otf></research/rgs01/applications/hpcf/authorized_apps/rhel8_apps
@@ -5856,7 +5831,7 @@ xmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></research/rgs01/applica
 tions/hpcf/authorized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/open
 type/public/lm/lmroman17-regular.otf>
 Output written on Report-sample-distribution-analysis-2024-09-05.pdf (11 pages, 
-245546 bytes).
+245543 bytes).
 
 PDF statistics: 189 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams

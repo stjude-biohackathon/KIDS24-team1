@@ -218,7 +218,7 @@ df %>%
   count(Assay) %>%
   arrange(desc(n)) %>% 
   regulartable() %>%
-  fontsize(size = 12, part = "all")
+  fontsize(size = 11, part = "all") 
 ```
 
 # Number of samples per brain cancer type and Assay
@@ -228,7 +228,7 @@ df %>%
   count(Assay, cancer_type_brain) %>%
   pivot_wider(names_from = Assay, values_from = n) %>% 
   regulartable() %>%
-  fontsize(size = 12, part = "all")
+  fontsize(size = 11, part = "all") 
 ```
 
 # Number of samples per brain cancer type, Assay, and SJUID
@@ -238,7 +238,7 @@ df %>%
   count(Assay, cancer_type_brain, SJUID) %>%
   pivot_wider(names_from = Assay, values_from = n) %>% 
   regulartable() %>%
-  fontsize(size = 12, part = "all")
+  fontsize(size = 11, part = "all") 
 ```
 
 # Future directions
