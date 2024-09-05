@@ -37,4 +37,5 @@ cd $(dirname "${BASH_SOURCE[0]}")/KIDS24-team1/analyses/module_of_interest
 
 ## Contact
 
-For questions, please submit an issue.
+Contributions, issues, and feature requests are welcome! Please feel free to check [issues](https://github.com/stjude-biohackathon/KIDS24-team1/issues).
+
