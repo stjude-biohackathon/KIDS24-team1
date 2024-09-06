@@ -4,18 +4,16 @@
 
 (1) Create and source python virtual environment
 ```
-<code> python3 -m venv env && source env/bin/activate  </code>
+python3 -m venv env && source env/bin/activate
 ```
 
 (2) Create settings.ini file in hackathon24Team1 folder
 ```
-<code>
-		[Settings]
-		secret_key = <secret_key>
-		allowed_hosts = <ip/host name>
-		static_root = <directory location for static files used by admin screens>
-		debug = <boolean>
-	</code>
+[Settings]
+secret_key = <secret_key>
+allowed_hosts = <ip/host name>
+static_root = <directory location for static files used by admin screens>
+debug = <boolean>
 ```
 
 (3) Run pip install -r requirements.txt to install required packages
@@ -24,7 +22,7 @@
 (6) To run dev server:
 
 ```
-	<code> ./manage.py runserver </code>
+./manage.py runserver
 ```	
 	
 ## Folder content
