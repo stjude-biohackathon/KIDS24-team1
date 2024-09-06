@@ -27,7 +27,7 @@ cd $(dirname "${BASH_SOURCE[0]}")/KIDS24-team1/analyses/module_of_interest
 
 ```
 ├── analyses
-|  └── sample-distribution-analysis
+|  └── data-exploratory-analysis
 ├── img
 |  └── chromic-logo.png
 ├── gitignore.txt
