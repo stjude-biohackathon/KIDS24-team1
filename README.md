@@ -25,13 +25,13 @@ cd $(dirname "${BASH_SOURCE[0]}")/KIDS24-team1/analyses/module_of_interest
 ```
 ├── analyses
 |  └── data-exploratory-analysis
+├── gitignore.txt
 ├── img
 |  └── chromic-logo.png
-├── gitignore.txt
 ├── LICENSE
 └── README.md
 ├── services
-|  └── API
+|  └── api
 |      └── hackathon24Team1
 |          ├── hackathon24Team1
 |          ├── manage.py
