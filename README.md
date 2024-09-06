@@ -45,7 +45,7 @@ cd $(dirname "${BASH_SOURCE[0]}")/KIDS24-team1/analyses/module_of_interest
 |          ├── package-lock.json
 |          ├── package.json
 |          ├── README.md
-|.         ├── src
+|          ├── src
 |_________ └── vite.config.mjs
 ```
 
