@@ -1,0 +1,90 @@
+.app-bar-title {
+  margin-top: 7px;
+  max-width: 250px;
+  width: 250px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.custom-outlined-card {
+  border-color: #dfe1df; /* Change to your desired outline color */
+}
+
+.error-text {
+  color: #d11947;
+}
+
+.fake-button {
+  cursor: pointer;
+  color: #007bff; /* Adjust color as needed */
+}
+
+.fake-button-nocursor {
+  color: #007bff; /* Adjust color as needed */
+}
+
+.helpTab {
+  margin-left: 0.8em;
+  white-space: pre-wrap;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #c7c9c8; /* Adjust color as needed */
+  margin: 0 10px; /* Adjust spacing as needed */
+}
+
+.login-logo {
+  max-height: 100px;
+  max-width: 100px
+}
+
+.or-text {
+  font-size: 16px; /* Adjust font size as needed */
+  padding: 0 10px; /* Adjust padding as needed */
+}
+
+.push-end {
+  margin-left: auto;
+}
+
+.selected-color {
+  background-color: #a8a9ad;
+  border-radius: 10px;
+}
+
+.selected-text-color {
+  color: azure;
+}
+
+.side-by-side-container {
+  display: flex;
+  gap: 10px; /* Adjust spacing as needed */
+}
+
+.tag-container {
+  display: flex;
+  gap: 10px; /* Adjust spacing as needed */
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.window-card {
+  background-color: transparent;
+}
