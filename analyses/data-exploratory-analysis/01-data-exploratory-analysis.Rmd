@@ -101,7 +101,7 @@ h2 {color: var(--chromic_color);
 
 # Information about this notebook
 This is an exploratory analysis of the data availability in terms of assays in the Comprehensive Omics Catalogue for Hartwell. This is critical for mitigating duplicate sequencing requests and efforts through Hartwell. This notebook aims to showcase:
-(1) what data have already been sequenced by Hartwell and 
+(1) which samples have already been sequenced by Hartwell, and 
 (2) what omics data are available per sample.
 
 For demo purposes, we subset by human brain tumor samples. We investigate the number of samples per `cancer_type_brain` and `Assay`.
