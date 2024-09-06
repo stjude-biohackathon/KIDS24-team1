@@ -36,7 +36,17 @@ cd $(dirname "${BASH_SOURCE[0]}")/KIDS24-team1/analyses/module_of_interest
 |          ├── hackathon24Team1
 |          ├── manage.py
 |          ├── omicsbackend
-|_________ └── requirements.txt
+|          ├── README.md
+|          └── requirements.txt
+|  └── webclient
+|      └── chromic_frontend
+|          ├── index.html
+|          ├── jsconfig.json
+|          ├── package-lock.json
+|          ├── package.json
+|          ├── README.md
+|.         ├── src
+|_________ └── vite.config.mjs
 ```
 
 ## Contact
