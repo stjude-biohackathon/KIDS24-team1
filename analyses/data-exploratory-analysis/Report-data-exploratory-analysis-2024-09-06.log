@@ -1,12 +1,12 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  5 SEP 2024 13:46
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  6 SEP 2024 11:43
  restricted system commands enabled.
 **/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
-Hub/KIDS24-team1/analyses/sample-distribution-analysis/plots/Report-sample-dist
-ribution-analysis-2024-09-05.tex
+Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorato
+ry-analysis-2024-09-06.tex
 
 (/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
-ub/KIDS24-team1/analyses/sample-distribution-analysis/plots/Report-sample-distr
-ibution-analysis-2024-09-05.tex
+ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
+y-analysis-2024-09-06.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
@@ -826,8 +826,8 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 136.
-(./Report-sample-distribution-analysis-2024-09-05.aux)
-\openout1 = Report-sample-distribution-analysis-2024-09-05.aux
+(./Report-data-exploratory-analysis-2024-09-06.aux)
+\openout1 = Report-data-exploratory-analysis-2024-09-06.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
@@ -1198,26 +1198,26 @@ Overfull \hbox (59.68521pt too wide) in paragraph at lines 146--146
  [] 
  []
 
-(./Report-sample-distribution-analysis-2024-09-05.toc)
+(./Report-data-exploratory-analysis-2024-09-06.toc)
 \tf@toc=\write4
 
-\openout4 = Report-sample-distribution-analysis-2024-09-05.toc
+\openout4 = Report-data-exploratory-analysis-2024-09-06.toc
 </research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-team1/
-img/chromic-logo.png, id=17, 444.57pt x 101.178pt>
+img/chromic-logo.png, id=17, 444.57pt x 96.36pt>
 File: /research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-t
 eam1/img/chromic-logo.png Graphic file (type png)
 <use /research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-te
 am1/img/chromic-logo.png>
 Package luatex.def Info: /research/dept/dnb/core_operations/Bioinformatics/achr
 oni/GitHub/KIDS24-team1/img/chromic-logo.png  used on input line 165.
-(luatex.def)             Requested size: 444.56892pt x 101.17773pt.
+(luatex.def)             Requested size: 444.56892pt x 96.35974pt.
 
 Package fancyhdr Warning: \headheight is too small (68.9055pt): 
-(fancyhdr)                Make it at least 104.77777pt, for example:
-(fancyhdr)                \setlength{\headheight}{104.77777pt}.
+(fancyhdr)                Make it at least 99.95978pt, for example:
+(fancyhdr)                \setlength{\headheight}{99.95978pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-35.87227pt}.
+(fancyhdr)                \addtolength{\topmargin}{-31.05428pt}.
 
 [1
 
@@ -5797,7 +5797,7 @@ Overfull \hbox (154.99498pt too wide) in paragraph at lines 1008--1008
 hel8_apps/lapack/3.10.1/install/lib64/liblapack.so.3.10.1[] 
  []
 
-[11] (./Report-sample-distribution-analysis-2024-09-05.aux)
+[11] (./Report-data-exploratory-analysis-2024-09-06.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -5806,15 +5806,15 @@ L3 programming layer <2024-03-14>
 
 Here is how much of LuaTeX's memory you used:
  21980 strings out of 476435
- 305423,1977958 words of node,token memory allocated
+ 305430,1977958 words of node,token memory allocated
  647 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 8 
 attribute, 73 glue_spec, 8 attribute_list, 1 write, 1 user_defined nodes
-   avail lists: 1:3,2:13703,3:2789,4:2620,5:355,6:1301,7:13188,8:19,9:12121,10:7
+   avail lists: 1:7,2:13703,3:2789,4:2620,5:355,6:1301,7:13188,8:20,9:12121,10:7
 ,11:196
  43639 multiletter control sequences out of 65536+600000
- 87 fonts using 39829859 bytes
- 90i,15n,129p,1714b,558s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87 fonts using 39829783 bytes
+ 90i,15n,129p,1708b,558s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/dejavu/DejaVuSans.ttf></research/rgs01/applications/hpcf/autho
 rized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/l
 mmono10-italic.otf></research/rgs01/applications/hpcf/authorized_apps/rhel8_apps
@@ -5830,8 +5830,8 @@ earch/rgs01/applications/hpcf/authorized_apps/rhel8_apps/texlive/install/2024/te
 xmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></research/rgs01/applica
 tions/hpcf/authorized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/open
 type/public/lm/lmroman17-regular.otf>
-Output written on Report-sample-distribution-analysis-2024-09-05.pdf (11 pages, 
-245543 bytes).
+Output written on Report-data-exploratory-analysis-2024-09-06.pdf (11 pages, 18
+8872 bytes).
 
 PDF statistics: 189 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams

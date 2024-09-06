@@ -1,5 +1,5 @@
 ---
-title: "Sample distribution analysis"
+title: "Data exploratory analysis"
 author: "Antonia Chroni <achroni@stjude.org> for St. Jude Children's Research Hospital BioHackathon Team 1"
 output:
   html_document:
@@ -119,7 +119,7 @@ suppressPackageStartupMessages({
 
 ```{r set-dir-and-file-names, echo=TRUE}
 attach(params)
-analysis_dir <- file.path(root_dir, "analyses", "sample-distribution-analysis") 
+analysis_dir <- file.path(root_dir, "analyses", "data-exploratory-analysis") 
 
 # We will first read in metadata file as we need to define sample_name 
 metadata_file <- file.path(analysis_dir, "input", input_file) # metadata input file
@@ -243,11 +243,9 @@ df %>%
 
 # Future directions
 
-The current exploratory data analysis can be expanded by investigating samples with paired assays.
-Moreover, if other metadata are available, e.g., disease_stage, treatment, this will lead to build large, longitudinal cohorts with multi-omic sequencing data. Such an analysis permits to consider samples according to the condition(s) of the experiment and research aims, accordingly. In addition, it can be used to refine research questions and/or generate new ones.
+The current exploratory data analysis module can be expanded by investigating samples with paired assays. Moreover, if other metadata are available, e.g., disease_stage, treatment, this will build large, longitudinal cohorts with multi-omic sequencing data. Such an analysis permits consideration of samples according to the condition(s) of the experiment and research aims. In addition, it can be used to refine research questions and/or generate new ones.
 
-This will facilitate collaboration across departments at St Jude, expedite discoveries, and find cures for children with cancer and other catastrophic diseases.
-
+This will facilitate collaboration across departments at St. Jude, expedite discoveries, and find cures for children with cancer and other catastrophic diseases.
 
 ```{r echo=FALSE}
 detach(params)

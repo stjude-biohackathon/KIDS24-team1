@@ -13,5 +13,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 ################################################################################################################
 # Run all scripts of the module
-Rscript --vanilla run-sample-distribution-analysis.R
+Rscript --vanilla run-data-exploratory-analysis.R
 ################################################################################################################

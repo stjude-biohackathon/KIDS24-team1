@@ -3,15 +3,15 @@
 #################################################################################
 # Set up directories and paths to root_dir and analysis_dir
 root_dir <- file.path("/research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-team1")
-analysis_dir <- file.path(root_dir, "analyses", "sample-distribution-analysis")
+analysis_dir <- file.path(root_dir, "analyses", "data-exploratory-analysis")
 report_dir <- file.path(analysis_dir, "plots") 
 
 ################################################################################################################
 # Run Rmd script
 ################################################################################################################
-rmarkdown::render('01-sample-distribution-analysis.Rmd', clean = TRUE,
+rmarkdown::render('01-data-exploratory-analysis.Rmd', clean = TRUE,
                               output_dir = file.path(report_dir),
-                              output_file = c(paste('Report-', 'sample-distribution-analysis', '-', Sys.Date(), sep = '')),
+                              output_file = c(paste('Report-', 'data-exploratory-analysis', '-', Sys.Date(), sep = '')),
                               output_format = 'all',
                               params = list(
                                 # the following parameters are defined in the `yaml` file
