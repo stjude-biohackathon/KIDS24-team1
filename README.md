@@ -1,7 +1,7 @@
 # KIDS24-team1
 
 The `KIDS24-team1` repository contains:
-(1) code and guidelines on how to use [CHROMIC](https://chromic.stjude.org) (Comprehensive Omics Catalogue for Hartwell), and
+(1) Django API framework [CHROMIC](https://chromic.stjude.org) (Comprehensive Omics Catalogue for Hartwell), and
 (2) code and results with a demo example to perform an exploratory analysis of the data availability in terms of assays in the CHROMIC. 
 
 This repository and efforts aim to facilitate collaboration across departments at St Jude, expedite discoveries, and find cures for children with cancer and other catastrophic diseases.
