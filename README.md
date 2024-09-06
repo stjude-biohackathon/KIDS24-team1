@@ -30,6 +30,13 @@ cd $(dirname "${BASH_SOURCE[0]}")/KIDS24-team1/analyses/module_of_interest
 ├── gitignore.txt
 ├── LICENSE
 └── README.md
+├── services
+|  └── API
+|      └── hackathon24Team1
+|          ├── hackathon24Team1
+|          ├── manage.py
+|          ├── omicsbackend
+| ________ └── requirements.txt
 ```
 
 ## Contact
