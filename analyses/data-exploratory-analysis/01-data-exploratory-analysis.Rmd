@@ -37,7 +37,7 @@ params:
 ```{r logo-file, echo=FALSE}
 attach(params)
 # Insert logo on the top of the html report 
-logo_file <- file.path(root_dir, "img", "chromic-logo.png")
+logo_file <- file.path(root_dir, "figures", "img", "chromic-logo.png")
 htmltools::img(src = knitr::image_uri(logo_file), alt = "logo", style = "position:absolute; top:0; left:0; padding:0px; height:120px;")
 detach(params)
 ```
@@ -104,7 +104,7 @@ This is an exploratory analysis of the data availability in terms of assays in t
 (1) which samples have already been sequenced by Hartwell, and 
 (2) what omics data are available per sample.
 
-For demo purposes, we subset by human brain tumor samples. We investigate the number of samples per `cancer_type_brain` and `Assay`.
+For demo purposes, we use dummy data and subset by human brain tumor samples. We investigate the number of samples per `cancer_type_brain` and `Assay`.
 
 # Set up
 
@@ -122,11 +122,26 @@ analysis_dir <- file.path(root_dir, "analyses", "data-exploratory-analysis")
 
 # We will first read in metadata file as we need to define sample_name 
 metadata_file <- file.path(analysis_dir, "input", input_file) # metadata input file
+palette_file <- file.path(root_dir, "figures", "palettes", "assay_color_palette.tsv")
+tumor_palette_file <- file.path(root_dir, "figures", "palettes", "tumor_color_palette.tsv")
+
+# File path to `plots` directory
+plots_dir <- file.path(analysis_dir, "plots") 
+if (!dir.exists(plots_dir)) {
+  dir.create(plots_dir)}
+
+figures_plots_dir <- file.path(plots_dir, "figures") 
+if (!dir.exists(figures_plots_dir)) {
+  dir.create(figures_plots_dir)}
 
 # File path to `results` directory
 results_dir <- file.path(analysis_dir, "results") 
 if (!dir.exists(results_dir)) {
   dir.create(results_dir)}
+
+source(paste0(analysis_dir, "/util/generate-fake-SJUID.R"))
+source(paste0(analysis_dir, "/util/function-create-barplot.R"))
+source(paste0(root_dir, "/figures/scripts/theme_plot.R"))
 ```
 
 # Read metadata file
@@ -152,20 +167,11 @@ project_df <- read.csv(metadata_file, stringsAsFactors=FALSE) %>%
   select(Source, Disease, Assay, Omics.Method.Detail, Site, Sub.Group, cancer_type_brain) 
 ```
 
-## Generate SJUID
+## Generate fake SJUID
 
 We will generate random SJUID per brain cancer type as this information is not contained in the current data.
 
-```{r generate-SJUID, echo=TRUE}
-# Make this reproducible
-set.seed(2024) 
-
-# create vector of data$Sample.SJUID with some duplicates
-generate_string <- function(length) {
-  chars <- c(LETTERS, LETTERS, 0:9)
-  paste0(sample(chars, length, replace = TRUE), collapse = "")
-}
-
+```{r generate-fake-SJUID, echo=TRUE}
 # Create a smaller set of unique strings, each starting with "SJH"
 unique_strings <- paste0("SJH", sapply(1:80, function(x) generate_string(8)))
 
@@ -206,14 +212,49 @@ df <- df %>%
   arrange(cancer_type_brain, Assay) 
 ```
 
+```{r palette, echo=TRUE}
+# Read color palette
+palette_df <- readr::read_tsv(palette_file, guess_max = 100000, show_col_types = FALSE)
+
+# Define and order palette
+palette <- palette_df$hex_codes
+names(palette) <- palette_df$color_names
+
+# Read color palette for tumor type
+tumor_palette_df <- readr::read_tsv(tumor_palette_file, guess_max = 100000, show_col_types = FALSE)
+
+# Define and order palette
+tumor_palette <- tumor_palette_df$hex_codes
+names(tumor_palette) <- tumor_palette_df$color_names
+```
+
 # Number of samples with assay information
 
 ```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
 tables1 <- df %>% count(Assay)
 cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples per assay"))
+caption_value = "Summary of samples per assay"
+
+print(knitr::kable(tables1, align = "lcccc", caption = caption_value))
 cat("  \n</div>  \n")
 cat("  \n\\pagebreak  \n")
+```
+
+```{r plot1, fig.width = 6, fig.height = 5, fig.fullwidth = TRUE}
+# Define parameters for function
+ylim <- max(tables1$n)
+
+# Run function
+fname <- paste0(figures_plots_dir, "/", "samples-per-assay.pdf")
+p <- create_barplot(plot_df = tables1, 
+                    ylim = ylim, 
+                    x_value = tables1$Assay, 
+                    use_palette = palette, 
+                    xtitle ="Type of assay", 
+                    title_value = caption_value)
+pdf(file = fname, width = 6, height = 5)
+print(p)
+dev.off()
 ```
 
 # Number of samples per brain cancer type and assay
@@ -225,9 +266,28 @@ There are `r samples_number` brain tumor samples with `r assays_number` assays i
 ```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
 tables1 <- df %>% count(cancer_type_brain)
 cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples and assays per brain cancer type"))
+caption_value = "Summary of samples and assays per brain cancer type"
+
+print(knitr::kable(tables1, align = "lcccc", caption = caption_value))
 cat("  \n</div>  \n")
 cat("  \n\\pagebreak  \n")
+```
+
+```{r plot2, fig.width = 6, fig.height = 5, fig.fullwidth = TRUE}
+# Define parameters for function
+ylim <- max(tables1$n)
+
+# Run function
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-assay-overall.pdf")
+p <- create_barplot(plot_df = tables1, 
+                    ylim = ylim, 
+                    x_value = tables1$cancer_type_brain, 
+                    use_palette = tumor_palette, 
+                    xtitle ="Brain tumor type",
+                    title_value = caption_value)
+pdf(file = fname, width = 6, height = 5)
+print(p)
+dev.off()
 ```
 
 ## Per assay
@@ -238,10 +298,30 @@ tables1 <- df %>% count(cancer_type_brain, Assay) %>%
   as.data.frame() %>%
   mutate_all(funs(replace_na(.,0)))
 
+caption_value = "Summary of samples and assays per brain cancer type and per assay"
+
 cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples and assays per brain cancer type and per assay"))
+print(knitr::kable(tables1, align = "lcccc", caption = caption_value))
 cat("  \n</div>  \n")
 cat("  \n\\pagebreak  \n")
+```
+
+```{r plot3, fig.width = 6, fig.height = 5, fig.fullwidth = TRUE}
+tables1 <- df %>% count(cancer_type_brain, Assay) %>%
+  as.data.frame() %>%
+  mutate_all(funs(replace_na(.,0)))
+
+# Plot stacked barplot 
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-per-assay.pdf")
+p <- create_stacked_barplot(plot_df = tables1, 
+                            x_value = tables1$cancer_type_brain, 
+                            use_palette = palette, 
+                            xtitle ="Brain tumor type", 
+                            legend = tables1$Assay,
+                            title_value = caption_value)
+pdf(file = fname, width = 6, height = 5)
+print(p)
+dev.off() 
 ```
 
 # Number of samples per brain cancer type, assay, and SJUID
