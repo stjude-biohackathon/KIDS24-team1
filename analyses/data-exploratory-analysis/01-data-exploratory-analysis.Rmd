@@ -111,7 +111,6 @@ For demo purposes, we subset by human brain tumor samples. We investigate the nu
 ```{r load-library, echo=TRUE}
 suppressPackageStartupMessages({
   library(tidyverse)
-  library(flextable)
 })
 ```
 
@@ -196,49 +195,67 @@ assays_number <- length(df$SJUID)
 samples_number <- length(unique(df$SJUID))
 ```
 
-## Number of samples with assay information
+```{r re-order-df, echo=TRUE}
+cancer_type_brain_order <- c("Ependymoma", "HGG", "LGG", "Medulloblastoma")
 
-There are `r samples_number` brain tumor samples with `r assays_number` assays in total.
+# Re-order df
+f <- c("WES", "WGBS", "WGS", "RNAseq", "ATACseq", "ChIPseq", "Methylation")# Level df by assay
+df <- df %>% 
+  dplyr:::mutate(Assay = factor(Assay),
+                 Assay = fct_relevel(Assay, f)) %>%
+  arrange(cancer_type_brain, Assay) 
+```
 
-## Number of assays per brain cancer type
+# Number of samples with assay information
 
 ```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
-tables1 <- df %>% count(cancer_type_brain)
+tables1 <- df %>% count(Assay)
 cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of assays per brain cancer type"))
+print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples per assay"))
 cat("  \n</div>  \n")
 cat("  \n\\pagebreak  \n")
 ```
 
+# Number of samples per brain cancer type and assay
 
-# Number of samples per Assay
+## Overall assays
 
-```{r table-1, echo=FALSE}
-df %>%
-  count(Assay) %>%
-  arrange(desc(n)) %>% 
-  regulartable() %>%
-  fontsize(size = 11, part = "all") 
+There are `r samples_number` brain tumor samples with `r assays_number` assays in total.
+
+```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
+tables1 <- df %>% count(cancer_type_brain)
+cat("  \n<div style=\"font-size:80%\">  \n")
+print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples and assays per brain cancer type"))
+cat("  \n</div>  \n")
+cat("  \n\\pagebreak  \n")
 ```
 
-# Number of samples per brain cancer type and Assay
+## Per assay
 
-```{r table-2, echo=FALSE}
-df %>%
-  count(Assay, cancer_type_brain) %>%
-  pivot_wider(names_from = Assay, values_from = n) %>% 
-  regulartable() %>%
-  fontsize(size = 11, part = "all") 
+```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
+tables1 <- df %>% count(cancer_type_brain, Assay) %>%
+  pivot_wider(names_from = Assay, values_from = n) %>%
+  as.data.frame() %>%
+  mutate_all(funs(replace_na(.,0)))
+
+cat("  \n<div style=\"font-size:80%\">  \n")
+print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples and assays per brain cancer type and per assay"))
+cat("  \n</div>  \n")
+cat("  \n\\pagebreak  \n")
 ```
 
-# Number of samples per brain cancer type, Assay, and SJUID
+# Number of samples per brain cancer type, assay, and SJUID
 
-```{r table-3, echo=FALSE}
-df %>%
-  count(Assay, cancer_type_brain, SJUID) %>%
-  pivot_wider(names_from = Assay, values_from = n) %>% 
-  regulartable() %>%
-  fontsize(size = 11, part = "all") 
+```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
+tables1 <- df %>% count(cancer_type_brain, Assay, SJUID) %>%
+  pivot_wider(names_from = Assay, values_from = n) %>%
+  as.data.frame() %>%
+  mutate_all(funs(replace_na(.,0)))
+
+cat("  \n<div style=\"font-size:80%\">  \n")
+print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples and assays per brain cancer type, per assay and per SJUID"))
+cat("  \n</div>  \n")
+cat("  \n\\pagebreak  \n")
 ```
 
 # Future directions

@@ -2624,69 +2624,6 @@ window.onload = function() {
   PagedTableDoc.initAll();
 };
 </script>
-<style type="text/css">.tabwid {
-font-size: initial;
-padding-bottom: 1em;
-}
-.tabwid table{
-border-spacing:0px !important;
-border-collapse:collapse;
-line-height:1;
-margin-left:auto;
-margin-right:auto;
-border-width: 0;
-border-color: transparent;
-caption-side: top;
-}
-.tabwid-caption-bottom table{
-caption-side: bottom;
-}
-.tabwid_left table{
-margin-left:0;
-}
-.tabwid_right table{
-margin-right:0;
-}
-.tabwid td, .tabwid th {
-padding: 0;
-}
-.tabwid a {
-text-decoration: none;
-}
-.tabwid thead {
-background-color: transparent;
-}
-.tabwid tfoot {
-background-color: transparent;
-}
-.tabwid table tr {
-background-color: transparent;
-}
-.katex-display {
-margin: 0 0 !important;
-}
-</style>
-<script>document.addEventListener("DOMContentLoaded", function(event) {
-  var els = document.querySelectorAll(".tabwid");
-  var tabwid_link = document.querySelector('link[href*="tabwid.css"]')
-  if (tabwid_link === null) {
-    const tabwid_styles = document.evaluate("//style[contains(., 'tabwid')]", document, null, XPathResult.ANY_TYPE, null );
-    tabwid_link = tabwid_styles.iterateNext();
-  }
-
-  Array.prototype.forEach.call(els, function(template) {
-      const dest = document.createElement("div");
-      template.parentNode.insertBefore(dest, template.nextSibling)
-      dest.setAttribute("class", "flextable-shadow-host");
-      const fantome = dest.attachShadow({mode: 'open'});
-      fantome.appendChild(template);
-      if (tabwid_link !== null) {
-        fantome.appendChild(tabwid_link.cloneNode(true));
-      }
-  });
-});
-
-</script>
 
 <style type="text/css">
 code{white-space: pre-wrap;}
@@ -3021,7 +2958,7 @@ Hartwell</strong></p>
 1</strong> <br /></p>
 <blockquote>
 <p>Date started: 09/04/2024 <br /> Date completed: 9/06/2024 <br />
-Report generated: 13:38:57 CDT 09/06/2024<br />
+Report generated: 11:42:07 CDT 09/09/2024<br />
 </p>
 </blockquote>
 </div>
@@ -3043,7 +2980,7 @@ investigate the number of samples per <code>cancer_type_brain</code> and
 <h1><span class="header-section-number">2</span> Set up</h1>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  <span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="fu">library</span>(flextable)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="co">#library(flextable)</span></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>})</span></code></pre></div>
 </div>
 <div id="directories-and-paths-to-file-inputsoutputs" class="section level1" number="3">
@@ -3122,18 +3059,73 @@ information is not contained in the current data.</p>
 <span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a><span class="co"># Number of samples per cancer_type_brain</span></span>
 <span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a>assays_number <span class="ot">&lt;-</span> <span class="fu">length</span>(df<span class="sc">$</span>SJUID)</span>
 <span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a>samples_number <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>SJUID))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>cancer_type_brain_order <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Ependymoma&quot;</span>, <span class="st">&quot;HGG&quot;</span>, <span class="st">&quot;LGG&quot;</span>, <span class="st">&quot;Medulloblastoma&quot;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co"># Re-order df</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;WES&quot;</span>, <span class="st">&quot;WGBS&quot;</span>, <span class="st">&quot;WGS&quot;</span>, <span class="st">&quot;RNAseq&quot;</span>, <span class="st">&quot;ATACseq&quot;</span>, <span class="st">&quot;ChIPseq&quot;</span>, <span class="st">&quot;Methylation&quot;</span>)<span class="co"># Level df by assay</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  dplyr<span class="sc">:::</span><span class="fu">mutate</span>(<span class="at">Assay =</span> <span class="fu">factor</span>(Assay),</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>                 <span class="at">Assay =</span> <span class="fu">fct_relevel</span>(Assay, f)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  <span class="fu">arrange</span>(cancer_type_brain, Assay) </span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#df[with(df, order(cancer_type_brain, Assay)), ]</span></span></code></pre></div>
 </div>
-<div id="number-of-samples-with-assay-information" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Number of samples
-with assay information</h2>
-<p>There are 60 brain tumor samples with 261 assays in total.</p>
 </div>
-<div id="number-of-assays-per-brain-cancer-type" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Number of assays per
-brain cancer type</h2>
+<div id="number-of-samples-with-assay-information" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Number of samples with
+assay information</h1>
 <div style="font-size:80%">
 <table>
-<caption>Summary of assays per brain cancer type</caption>
+<caption>Summary of samples per assay</caption>
+<thead>
+<tr class="header">
+<th align="left">Assay</th>
+<th align="center">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">WES</td>
+<td align="center">37</td>
+</tr>
+<tr class="even">
+<td align="left">WGBS</td>
+<td align="center">20</td>
+</tr>
+<tr class="odd">
+<td align="left">WGS</td>
+<td align="center">37</td>
+</tr>
+<tr class="even">
+<td align="left">RNAseq</td>
+<td align="center">49</td>
+</tr>
+<tr class="odd">
+<td align="left">ATACseq</td>
+<td align="center">21</td>
+</tr>
+<tr class="even">
+<td align="left">ChIPseq</td>
+<td align="center">37</td>
+</tr>
+<tr class="odd">
+<td align="left">Methylation</td>
+<td align="center">60</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="number-of-samples-per-brain-cancer-type-and-assay" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Number of samples per
+brain cancer type and assay</h1>
+<div id="overall-assays" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Overall assays</h2>
+<p>There are 60 brain tumor samples with 261 assays in total.</p>
+<div style="font-size:80%">
+<table>
+<caption>Summary of samples and assays per brain cancer type</caption>
 <thead>
 <tr class="header">
 <th align="left">cancer_type_brain</th>
@@ -3162,21 +3154,865 @@ brain cancer type</h2>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
+<div id="per-assay" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Per assay</h2>
+<div style="font-size:80%">
+<table>
+<caption>Summary of samples and assays per brain cancer type and per
+assay</caption>
+<colgroup>
+<col width="25%" />
+<col width="6%" />
+<col width="8%" />
+<col width="6%" />
+<col width="11%" />
+<col width="11%" />
+<col width="18%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">cancer_type_brain</th>
+<th align="center">WES</th>
+<th align="center">WGBS</th>
+<th align="center">WGS</th>
+<th align="center">RNAseq</th>
+<th align="left">ChIPseq</th>
+<th align="center">Methylation</th>
+<th align="center">ATACseq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">20</td>
+<td align="center">20</td>
+<td align="center">20</td>
+<td align="center">20</td>
+<td align="left">20</td>
+<td align="center">20</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">16</td>
+<td align="left">0</td>
+<td align="center">12</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">17</td>
+<td align="center">0</td>
+<td align="center">17</td>
+<td align="center">13</td>
+<td align="left">17</td>
+<td align="center">17</td>
+<td align="center">21</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">11</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="number-of-samples-per-assay" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Number of samples per
-Assay</h1>
-<div class="tabwid"><style>.cl-4a1a938a{}.cl-4a0d3fbe{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4a13a20a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4a13a21e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4a13c7d0{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a13c7e4{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a13c7e5{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a13c7ee{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a13c7ef{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a13c7f8{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-4a1a938a"><thead><tr style="overflow-wrap:break-word;"><th class="cl-4a13c7d0"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">Assay</span></p></th><th class="cl-4a13c7e4"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">n</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7e5"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">Methylation</span></p></td><td class="cl-4a13c7ee"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">60</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7e5"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">RNAseq</span></p></td><td class="cl-4a13c7ee"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">49</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7e5"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">ChIPseq</span></p></td><td class="cl-4a13c7ee"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">37</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7e5"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">WES</span></p></td><td class="cl-4a13c7ee"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">37</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7e5"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">WGS</span></p></td><td class="cl-4a13c7ee"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">37</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7e5"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">ATACseq</span></p></td><td class="cl-4a13c7ee"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">21</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a13c7ef"><p class="cl-4a13a20a"><span class="cl-4a0d3fbe">WGBS</span></p></td><td class="cl-4a13c7f8"><p class="cl-4a13a21e"><span class="cl-4a0d3fbe">20</span></p></td></tr></tbody></table></div>
+<div style="page-break-after: always;"></div>
 </div>
-<div id="number-of-samples-per-brain-cancer-type-and-assay" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Number of samples per
-brain cancer type and Assay</h1>
-<div class="tabwid"><style>.cl-4a4b6ff0{}.cl-4a3ff40e{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4a44bf20{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4a44bf3e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4a44e3c4{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a44e3d8{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a44e3e2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a44e3e3{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a44e3ec{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4a44e3ed{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-4a4b6ff0"><thead><tr style="overflow-wrap:break-word;"><th class="cl-4a44e3c4"><p class="cl-4a44bf20"><span class="cl-4a3ff40e">cancer_type_brain</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">ATACseq</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">ChIPseq</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">Methylation</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">RNAseq</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">WES</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">WGBS</span></p></th><th class="cl-4a44e3d8"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">WGS</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-4a44e3e2"><p class="cl-4a44bf20"><span class="cl-4a3ff40e">LGG</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">21</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">17</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">17</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">13</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">17</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">17</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a44e3e2"><p class="cl-4a44bf20"><span class="cl-4a3ff40e">Ependymoma</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">20</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">20</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">20</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">20</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">20</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">20</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a44e3e2"><p class="cl-4a44bf20"><span class="cl-4a3ff40e">HGG</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">12</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">16</span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3e3"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4a44e3ec"><p class="cl-4a44bf20"><span class="cl-4a3ff40e">Medulloblastoma</span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e">11</span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td><td class="cl-4a44e3ed"><p class="cl-4a44bf3e"><span class="cl-4a3ff40e"></span></p></td></tr></tbody></table></div>
 </div>
 <div id="number-of-samples-per-brain-cancer-type-assay-and-sjuid" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Number of samples per
-brain cancer type, Assay, and SJUID</h1>
-<div class="tabwid"><style>.cl-4ab1735e{}.cl-4a9d37cc{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4aa3b106{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4aa3b124{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4aa3e1ee{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4aa3e202{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4aa3e20c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4aa3e20d{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4aa3e216{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4aa3e220{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-4ab1735e"><thead><tr style="overflow-wrap:break-word;"><th class="cl-4aa3e1ee"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">cancer_type_brain</span></p></th><th class="cl-4aa3e1ee"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJUID</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">ATACseq</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">ChIPseq</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">Methylation</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">RNAseq</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">WES</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">WGBS</span></p></th><th class="cl-4aa3e202"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">WGS</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH2W47P7DG</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH5HCKPC97</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHAY4GX4AN</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHBNJSZHW6</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHBV3Q6UVR</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHC70DZRJS</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHCLGFJTIG</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHCN03RCVD</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHDDTE0SYL</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHI52BLNWK</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHIQTNAYIF</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHNPJTQHIT</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHOFORRR7C</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHOY05OJJN</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHQBOPS9FD</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHUTPISXFQ</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHVIS5Q8HX</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHWS0NRZVA</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHXIKCWNKY</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHYPKTG3P5</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">LGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHZW7GYEF9</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH0H5WYREP</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH2HPPEEKM</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH51B396IW</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH5HCKPC97</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH98QNKIUU</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH9YMLFOTI</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHA6KC56J6</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHBKS7QSFO</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHC70DZRJS</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHCN03RCVD</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHD1KIUMM6</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHFGGJRHYO</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHHZH67WMF</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHI8CC7QT8</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHIQTNAYIF</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHKVQEBOCP</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHKYUIYAME</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHPVXLACLM</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHUMKP2L6V</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Ependymoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHXTBTQ5ZT</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH5QHZM4US</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHADL5OJME</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHBISK5KBU</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHBL7CDYRN</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHEOVURBMJ</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHEQG3P4FK</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHHPNQERSQ</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHHW23UJ9P</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHJ59RLHSU</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHKKDDXOYH</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHMI643DMD</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHROJUQZAP</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH77NRDWUX</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJH8HIE3P0P</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHAFTIOMPQ</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHC1QST5GR</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHFCYGKSDY</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHJACCGA3S</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHQS0D51KH</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHXVMEU21L</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHY4W1ZWCY</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHZ40PTCYH</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">Medulloblastoma</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHZZLRCGJ6</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHDDTE0SYL</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHQBOPS9FD</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e20c"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHUTPISXFQ</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e20d"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4aa3e216"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">HGG</span></p></td><td class="cl-4aa3e216"><p class="cl-4aa3b106"><span class="cl-4a9d37cc">SJHVIS5Q8HX</span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc">1</span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td><td class="cl-4aa3e220"><p class="cl-4aa3b124"><span class="cl-4a9d37cc"></span></p></td></tr></tbody></table></div>
+brain cancer type, assay, and SJUID</h1>
+<div style="font-size:80%">
+<table>
+<caption>Summary of samples and assays per brain cancer type, per assay
+and per SJUID</caption>
+<colgroup>
+<col width="21%" />
+<col width="15%" />
+<col width="5%" />
+<col width="7%" />
+<col width="5%" />
+<col width="8%" />
+<col width="10%" />
+<col width="15%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">cancer_type_brain</th>
+<th align="center">SJUID</th>
+<th align="center">WES</th>
+<th align="center">WGBS</th>
+<th align="center">WGS</th>
+<th align="left">RNAseq</th>
+<th align="center">ChIPseq</th>
+<th align="center">Methylation</th>
+<th align="center">ATACseq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJH0H5WYREP</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJH2HPPEEKM</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJH51B396IW</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJH5HCKPC97</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJH98QNKIUU</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJH9YMLFOTI</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHA6KC56J6</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHBKS7QSFO</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHC70DZRJS</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHCN03RCVD</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHD1KIUMM6</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHFGGJRHYO</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHHZH67WMF</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHI8CC7QT8</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHIQTNAYIF</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHKVQEBOCP</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHKYUIYAME</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHPVXLACLM</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Ependymoma</td>
+<td align="center">SJHUMKP2L6V</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Ependymoma</td>
+<td align="center">SJHXTBTQ5ZT</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJH5QHZM4US</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHADL5OJME</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHBISK5KBU</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHBL7CDYRN</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHDDTE0SYL</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHEOVURBMJ</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHEQG3P4FK</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHHPNQERSQ</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHHW23UJ9P</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHJ59RLHSU</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHKKDDXOYH</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHMI643DMD</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHQBOPS9FD</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHROJUQZAP</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">HGG</td>
+<td align="center">SJHUTPISXFQ</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">HGG</td>
+<td align="center">SJHVIS5Q8HX</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJH2W47P7DG</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHAY4GX4AN</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHBNJSZHW6</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHBV3Q6UVR</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHCLGFJTIG</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHDDTE0SYL</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHI52BLNWK</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHNPJTQHIT</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHOFORRR7C</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHOY05OJJN</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHQBOPS9FD</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHUTPISXFQ</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHVIS5Q8HX</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHWS0NRZVA</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHXIKCWNKY</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHYPKTG3P5</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHZW7GYEF9</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJH5HCKPC97</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHC70DZRJS</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">LGG</td>
+<td align="center">SJHCN03RCVD</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">LGG</td>
+<td align="center">SJHIQTNAYIF</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJH77NRDWUX</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJH8HIE3P0P</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHAFTIOMPQ</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHC1QST5GR</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHFCYGKSDY</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHJACCGA3S</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHQS0D51KH</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHXVMEU21L</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHY4W1ZWCY</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHZ40PTCYH</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="left">Medulloblastoma</td>
+<td align="center">SJHZZLRCGJ6</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="left">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 <div id="future-directions" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Future directions</h1>
@@ -3217,34 +4053,22 @@ catastrophic diseases.</p>
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] flextable_0.9.6 lubridate_1.9.3 forcats_1.0.0   stringr_1.5.1  
-##  [5] dplyr_1.1.4     purrr_1.0.2     readr_2.1.5     tidyr_1.3.1    
-##  [9] tibble_3.2.1    ggplot2_3.5.1   tidyverse_2.0.0
+##  [1] lubridate_1.9.3 forcats_1.0.0   stringr_1.5.1   dplyr_1.1.4    
+##  [5] purrr_1.0.2     readr_2.1.5     tidyr_1.3.1     tibble_3.2.1   
+##  [9] ggplot2_3.5.1   tidyverse_2.0.0
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] gtable_0.3.5            xfun_0.47               bslib_0.8.0            
-##  [4] tzdb_0.4.0              vctrs_0.6.5             tools_4.4.0            
-##  [7] generics_0.1.3          parallel_4.4.0          curl_5.2.1             
-## [10] fansi_1.0.6             pkgconfig_2.0.3         data.table_1.15.4      
-## [13] uuid_1.2-1              lifecycle_1.0.4         compiler_4.4.0         
-## [16] textshaping_0.4.0       munsell_0.5.1           httpuv_1.6.15          
-## [19] fontquiver_0.2.1        fontLiberation_0.1.0    htmltools_0.5.8.1      
-## [22] sass_0.4.9              yaml_2.3.10             pillar_1.9.0           
-## [25] later_1.3.2             crayon_1.5.3            jquerylib_0.1.4        
-## [28] gfonts_0.2.0            openssl_2.2.1           cachem_1.1.0           
-## [31] mime_0.12               fontBitstreamVera_0.1.1 zip_2.3.1              
-## [34] tidyselect_1.2.1        digest_0.6.37           stringi_1.8.4          
-## [37] fastmap_1.2.0           grid_4.4.0              colorspace_2.1-1       
-## [40] cli_3.6.3               magrittr_2.0.3          crul_1.5.0             
-## [43] utf8_1.2.4              withr_3.0.1             gdtools_0.3.7          
-## [46] scales_1.3.0            promises_1.3.0          bit64_4.0.5            
-## [49] timechange_0.3.0        rmarkdown_2.28          officer_0.6.6          
-## [52] bit_4.0.5               askpass_1.2.0           ragg_1.3.2             
-## [55] hms_1.1.3               shiny_1.9.1             evaluate_0.24.0        
-## [58] knitr_1.48              rlang_1.1.4             Rcpp_1.0.13            
-## [61] xtable_1.8-4            glue_1.7.0              httpcode_0.3.0         
-## [64] xml2_1.3.6              vroom_1.6.5             jsonlite_1.8.8         
-## [67] R6_2.5.1                systemfonts_1.1.0</code></pre>
+##  [1] bit_4.0.5         gtable_0.3.5      jsonlite_1.8.8    crayon_1.5.3     
+##  [5] compiler_4.4.0    tidyselect_1.2.1  parallel_4.4.0    jquerylib_0.1.4  
+##  [9] scales_1.3.0      yaml_2.3.10       fastmap_1.2.0     mime_0.12        
+## [13] R6_2.5.1          generics_0.1.3    knitr_1.48        munsell_0.5.1    
+## [17] bslib_0.8.0       pillar_1.9.0      tzdb_0.4.0        rlang_1.1.4      
+## [21] utf8_1.2.4        stringi_1.8.4     cachem_1.1.0      xfun_0.47        
+## [25] sass_0.4.9        bit64_4.0.5       timechange_0.3.0  cli_3.6.3        
+## [29] withr_3.0.1       magrittr_2.0.3    digest_0.6.37     grid_4.4.0       
+## [33] vroom_1.6.5       hms_1.1.3         lifecycle_1.0.4   vctrs_0.6.5      
+## [37] evaluate_0.24.0   glue_1.7.0        fansi_1.0.6       colorspace_2.1-1 
+## [41] rmarkdown_2.28    tools_4.4.0       pkgconfig_2.0.3   htmltools_0.5.8.1</code></pre>
 </div>
 
 
