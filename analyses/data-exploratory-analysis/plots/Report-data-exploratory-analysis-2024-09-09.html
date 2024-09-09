@@ -2958,7 +2958,7 @@ Hartwell</strong></p>
 1</strong> <br /></p>
 <blockquote>
 <p>Date started: 09/04/2024 <br /> Date completed: 9/06/2024 <br />
-Report generated: 17:01:41 CDT 09/09/2024<br />
+Report generated: 17:20:29 CDT 09/09/2024<br />
 </p>
 </blockquote>
 </div>
@@ -2972,8 +2972,10 @@ critical for mitigating duplicate sequencing requests and efforts
 through Hartwell. This notebook aims to showcase: (1) which samples have
 already been sequenced by Hartwell, and (2) what omics data are
 available per sample.</p>
-<p>For demo purposes, we use dummy data and subset by human brain tumor
-samples. We investigate the number of samples per
+<p>For demo purposes, we use dummy data cohort and subset by human brain
+tumor samples. In addition, we generate random fake SJUID per brain
+cancer type as this information is not contained in the demo
+cohort.Finally, we investigate the number of samples per
 <code>cancer_type_brain</code> and <code>Assay</code>.</p>
 </div>
 <div id="set-up" class="section level1" number="2">
@@ -3036,8 +3038,8 @@ to file Inputs/Outputs</h1>
 <div id="generate-fake-sjuid" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Generate fake
 SJUID</h2>
-<p>We will generate random SJUID per brain cancer type as this
-information is not contained in the current data.</p>
+<p>We will generate random fake SJUID per brain cancer type as this
+information is not contained in the demo cohort.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Create a smaller set of unique strings, each starting with &quot;SJH&quot;</span></span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>unique_strings <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;SJH&quot;</span>, <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>, <span class="cf">function</span>(x) <span class="fu">generate_string</span>(<span class="dv">8</span>)))</span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
@@ -3073,6 +3075,10 @@ information is not contained in the current data.</p>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  dplyr<span class="sc">:::</span><span class="fu">mutate</span>(<span class="at">Assay =</span> <span class="fu">factor</span>(Assay),</span>
 <span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>                 <span class="at">Assay =</span> <span class="fu">fct_relevel</span>(Assay, f)) <span class="sc">%&gt;%</span></span>
 <span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  <span class="fu">arrange</span>(cancer_type_brain, Assay) </span></code></pre></div>
+</div>
+<div id="color-palette-for-plotting" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Color palette for
+plotting</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Read color palette</span></span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>palette_df <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_tsv</span>(palette_file, <span class="at">guess_max =</span> <span class="dv">100000</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>

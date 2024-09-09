@@ -104,7 +104,7 @@ This is an exploratory analysis of the data availability in terms of assays in t
 (1) which samples have already been sequenced by Hartwell, and 
 (2) what omics data are available per sample.
 
-For demo purposes, we use dummy data and subset by human brain tumor samples. We investigate the number of samples per `cancer_type_brain` and `Assay`.
+For demo purposes, we use dummy data cohort and subset by human brain tumor samples. In addition, we generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort.Finally, we investigate the number of samples per `cancer_type_brain` and `Assay`.
 
 # Set up
 
@@ -169,7 +169,7 @@ project_df <- read.csv(metadata_file, stringsAsFactors=FALSE) %>%
 
 ## Generate fake SJUID
 
-We will generate random SJUID per brain cancer type as this information is not contained in the current data.
+We will generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort.
 
 ```{r generate-fake-SJUID, echo=TRUE}
 # Create a smaller set of unique strings, each starting with "SJH"
@@ -211,6 +211,8 @@ df <- df %>%
                  Assay = fct_relevel(Assay, f)) %>%
   arrange(cancer_type_brain, Assay) 
 ```
+
+## Color palette for plotting
 
 ```{r palette, echo=TRUE}
 # Read color palette

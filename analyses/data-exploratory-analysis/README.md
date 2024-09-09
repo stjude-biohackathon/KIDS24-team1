@@ -25,7 +25,8 @@ This folder contains a script tasked to analyze the distribution of samples acro
 
 This is an exploratory analysis of the data availability in terms of assays in the Comprehensive Omics Catalogue for Hartwell. 
 
-For demo purposes, we provide an example for the `./input/demo-data.csv`. We subset this data by human brain tumor samples to use as an example cohort. 
+For demo purposes, we provide an example for the `./input/demo-data.csv`. We subset this data by human brain tumor samples to use as an example cohort. In addition, we generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort.
+
 
 
 ## Folder structure 
@@ -34,14 +35,23 @@ The structure of this folder is as follows:
 
 ```
 ├── 01-data-exploratory-analysis.Rmd
+├── gitignore.txt
 ├── input
 |   └── demo-data.csv
 ├── plots
+|   ├── figures
+|   |   ├── cancer-type-brain-assay-overall.pdf
+|   |   ├── cancer-type-brain-per-assay.pdf
+|   |   └── samples-per-assay.pdf
 |   ├── Report-data-exploratory-analysis-<Sys.Date()>.html
 |   └── Report-data-exploratory-analysis-<Sys.Date()>.pdf
 ├── README.md
+├── Report-data-exploratory-analysis-<Sys.Date()>.log
 ├── results
 |   └── cohort.tsv
 ├── run-data-exploratory-analysis.R
-└── run-data-exploratory-analysis.sh
+├── run-data-exploratory-analysis.R
+└── util
+|   ├── function-create-barplot.R
+|___└── generate-fake-SJUID.R
 ```
