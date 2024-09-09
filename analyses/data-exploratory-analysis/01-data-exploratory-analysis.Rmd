@@ -104,7 +104,7 @@ This is an exploratory analysis of the data availability in terms of assays in t
 (1) which samples have already been sequenced by Hartwell, and 
 (2) what omics data are available per sample.
 
-For demo purposes, we use dummy data cohort and subset by human brain tumor samples. In addition, we generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort.Finally, we investigate the number of samples per `cancer_type_brain` and `Assay`.
+For demo purposes, we use dummy data cohort and subset by human brain tumor samples. In addition, we generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort. Finally, we investigate the number of samples per `cancer_type_brain` and `Assay`.
 
 # Set up
 
