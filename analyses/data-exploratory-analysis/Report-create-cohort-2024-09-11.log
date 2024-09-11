@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  11 SEP 2024 13:57
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  11 SEP 2024 18:12
  restricted system commands enabled.
 **/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-create-cohort-
@@ -1047,19 +1047,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--151
 [2]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 170.
-[3] [4]
-Overfull \hbox (144.49498pt too wide) in paragraph at lines 333--333
+[3] [4] [5]
+Overfull \hbox (144.49498pt too wide) in paragraph at lines 391--391
 []\TU/lmtt/m/n/10 ## BLAS:   /research/rgs01/applications/hpcf/authorized_apps/r
 hel8_apps/lapack/3.10.1/install/lib64/libblas.so.3.10.1[] 
  []
 
 
-Overfull \hbox (154.99498pt too wide) in paragraph at lines 333--333
+Overfull \hbox (154.99498pt too wide) in paragraph at lines 391--391
 []\TU/lmtt/m/n/10 ## LAPACK: /research/rgs01/applications/hpcf/authorized_apps/r
 hel8_apps/lapack/3.10.1/install/lib64/liblapack.so.3.10.1[] 
  []
 
-[5] (./Report-create-cohort-2024-09-11.aux)
+[6] (./Report-create-cohort-2024-09-11.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1067,14 +1067,14 @@ L3 programming layer <2024-03-14>
 )
 
 Here is how much of LuaTeX's memory you used:
- 21009 strings out of 476435
+ 21010 strings out of 476435
  125086,1977958 words of node,token memory allocated
  577 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 8 
 attribute, 59 glue_spec, 8 attribute_list, 1 write, 1 user_defined nodes
-   avail lists: 1:4,2:1058,3:878,4:434,5:350,6:78,7:4415,8:18,9:395,10:3,11:111
+   avail lists: 1:4,2:1911,3:878,4:955,5:603,6:78,7:7530,8:18,9:395,10:3,11:111
  42738 multiletter control sequences out of 65536+600000
- 65 fonts using 19421339 bytes
+ 65 fonts using 19421415 bytes
  90i,15n,121p,1162b,397s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/texlive/install/20
 24/texmf-dist/fonts/opentype/public/lm/lmmono10-italic.otf></research/rgs01/appl
@@ -1090,10 +1090,10 @@ ntype/public/lm/lmroman12-bold.otf></research/rgs01/applications/hpcf/authorized
 _apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmroma
 n12-regular.otf></research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/te
 xlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf>
-Output written on Report-create-cohort-2024-09-11.pdf (5 pages, 156723 bytes).
+Output written on Report-create-cohort-2024-09-11.pdf (6 pages, 162880 bytes).
 
-PDF statistics: 126 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 131072)
+PDF statistics: 130 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 131072)
  57 words of extra memory for PDF output out of 10000 (max. 100000000)
 

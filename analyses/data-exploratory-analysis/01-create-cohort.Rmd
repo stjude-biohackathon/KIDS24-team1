@@ -173,7 +173,33 @@ df <- project_df %>%
   left_join(bind_df, by = "cancer_type_brain", relationship = "many-to-many") %>% 
   unique() %>% 
   mutate(match_id_assay = paste(SJUID, Assay, sep = "_")) %>%
-  distinct(match_id_assay, .keep_all = TRUE) 
+  distinct(match_id_assay, .keep_all = TRUE) %>%
+  add_column(samples_drop = "keep") %>%
+  mutate(samples_drop = case_when(grepl("SJH5HCKPC97", SJUID) & grepl("WES", Assay) ~ "drop",
+                                  grepl("SJH98QNKIUU", SJUID) & grepl("WES", Assay) ~ "drop",
+                                  grepl("SJH0H5WYREP", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHKYUIYAME", SJUID) & grepl("Methylation", Assay) ~ "drop",
+                                  grepl("SJHFGGJRHYO", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHKVQEBOCP", SJUID) & grepl("Methylation", Assay) ~ "drop",
+                                  grepl("SJHUMKP2L6V", SJUID) & grepl("ATACseq", Assay) ~ "drop",
+                                  grepl("SJHCN03RCVD", SJUID) & grepl("ATACseq", Assay) ~ "drop",
+                                  grepl("SJHBNJSZHW6", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHDDTE0SYL", SJUID) & grepl("Methylation|ATACseq", Assay) ~ "drop",
+                                  grepl("SJHWS0NRZVA", SJUID) & grepl("WGS", Assay) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("WGS", Assay) ~ "drop",
+                                  grepl("SJHHW23UJ9P", SJUID) & grepl("ATACseq|WGS", Assay) ~ "drop",
+                                  grepl("SJHBISK5KBU", SJUID) & grepl("WGS", Assay) ~ "drop",
+                                  grepl("SJHROJUQZAP", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHC1QST5GR", SJUID) & grepl("ATACseq", Assay) ~ "drop",
+                                  grepl("SJHHZH67WMF", SJUID) & grepl("ATACseq|ChIPseq", Assay) ~ "drop",
+                                  grepl("SJH8HIE3P0P", SJUID) & grepl("Methylation|ChIPseq|RNAseq", Assay) ~ "drop",
+                                  grepl("SJHZZLRCGJ6", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("ChIPseq", Assay) ~ "drop",
+                                  grepl("SJHNPJTQHIT", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHEQG3P4FK", SJUID) & grepl("RNAseq|WES", Assay) ~ "drop",
+                                  TRUE ~ samples_drop)) %>%
+  filter(samples_drop == "keep") %>%
+  select(!samples_drop) 
 
 # Save file
 write.csv(df, file.path(input_dir, "cohort.csv"), row.names = FALSE)
@@ -194,13 +220,45 @@ longitudinal <- rep(longitudinal_vec, each=n)
 #  as.data.frame()
 
 longitudinal_df <- cbind(df, longitudinal) %>% 
-  #left_join(longitudinal_bind_df, by = "SJUID", relationship = "many-to-many") %>% 
   unique() %>% 
   mutate(match_id_longitudinal_assay = paste(SJUID, longitudinal, Assay, sep = "_")) %>%
+  mutate(match_id_longitudinal = paste(SJUID, longitudinal, sep = "_")) %>%
   distinct(match_id_longitudinal_assay, .keep_all = TRUE) 
 
+# Select random SJUID and longitudinal and create uneven longitudinal information/SJUID
+# list <- unique(longitudinal_df$SJUID)
+# list
+
+filter_longitudinal_df <-longitudinal_df %>%
+  add_column(samples_drop = "keep") %>%
+  mutate(samples_drop = case_when(grepl("SJH5HCKPC97", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJH98QNKIUU", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJH0H5WYREP", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHKYUIYAME", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHFGGJRHYO", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHKVQEBOCP", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHUMKP2L6V", SJUID) & grepl("Relapse", longitudinal) ~ "drop",
+                                  grepl("SJHCN03RCVD", SJUID) & grepl("Relapse", longitudinal) ~ "drop",
+                                  grepl("SJHBNJSZHW6", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHDDTE0SYL", SJUID) & grepl("Remission|Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHWS0NRZVA", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHHW23UJ9P", SJUID) & grepl("Diagnosis|Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHBISK5KBU", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHROJUQZAP", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHC1QST5GR", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHHZH67WMF", SJUID) & grepl("Diagnosis|Remission", longitudinal) ~ "drop",
+                                  grepl("SJH8HIE3P0P", SJUID) & grepl("Diagnosis|Remission|Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHZZLRCGJ6", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHNPJTQHIT", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHEQG3P4FK", SJUID) & grepl("Remission|Deceased", longitudinal) ~ "drop",
+                                  TRUE ~ samples_drop)) %>%
+  filter(samples_drop == "keep") %>%
+  select(!samples_drop) 
+
 # Save file
-write.csv(longitudinal_df, file.path(input_dir, "cohort-longitudinal.csv"), row.names = FALSE)
+write.csv(filter_longitudinal_df, file.path(input_dir, "cohort-longitudinal.csv"), row.names = FALSE)
 ```
 
 ```{r echo=FALSE}
