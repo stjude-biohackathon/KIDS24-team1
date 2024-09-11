@@ -211,7 +211,7 @@ cat("  \n\\pagebreak  \n")
 ylim <- max(tables1$n)
 
 # Run function
-fname <- paste0(figures_plots_dir, "/", "samples-per-assay-longitudinal.pdf")
+fname <- paste0(figures_plots_dir, "/", "samples-per-assay.pdf")
 p <- create_barplot(plot_df = tables1, 
                     ylim = ylim, 
                     x_value = tables1$Assay, 
@@ -244,7 +244,7 @@ cat("  \n\\pagebreak  \n")
 ylim <- max(tables1$n)
 
 # Run function
-fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-assay-longitudinal-overall.pdf")
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-assay-overall-longitudinal.pdf")
 p <- create_barplot(plot_df = tables1, 
                     ylim = ylim, 
                     x_value = tables1$cancer_type_brain, 
@@ -314,31 +314,38 @@ tables1 <- df %>% count(cancer_type_brain, SJUID, longitudinal, Assay) %>%
   as.data.frame() %>%
   mutate_all(funs(replace_na(.,0)))
 
+caption_value = "Summary of cohort per brain cancer type, SJUID, disease stage, and assay"
+
 cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of cohort per brain cancer type, SJUID, disease stage, and assay"))
+print(knitr::kable(tables1, align = "lcccc", caption = caption_value))
 cat("  \n</div>  \n")
 cat("  \n\\pagebreak  \n")
 ```
 
-```{r plot4, fig.width = 6, fig.height = 5, fig.fullwidth = TRUE}
+## Plots
+
+```{r plot4, fig.width = 25, fig.height = 6, fig.fullwidth = TRUE}
 tables1 <- df %>% count(cancer_type_brain, SJUID, longitudinal, Assay) %>%
   as.data.frame() %>%
-  mutate_all(funs(replace_na(.,0))) %>%
-  mutate(match_id_brain = paste(cancer_type_brain, SJUID, sep = "_")) 
+  arrange(cancer_type_brain, longitudinal, Assay) %>%
+  mutate(match_id_brain = paste(cancer_type_brain, SJUID, sep = "_"),
+         match_id_brain_longitudinal = paste(cancer_type_brain, SJUID, longitudinal, sep = "_")) %>%
+  mutate_all(funs(replace_na(.,0))) 
 
 # Run function
-fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-patient-assay.pdf")
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-per-assay-patient.pdf")
 p <- create_stacked_barplot(plot_df = tables1, 
-                            x_value = tables1$match_id_brain, 
+                            x_value = tables1$match_id_brain_longitudinal, 
                             use_palette = palette, 
                             xtitle ="Brain tumor type and patient case", 
                             legend = tables1$Assay,
-                            title_value = caption_value)
-pdf(file = fname, width = 12, height = 6)
+                            title_value = "Summary of samples per brain cancer type, SJUID and disease stages across assays")
+pdf(file = fname, width = 25, height = 6)
 print(p)
 dev.off() 
+```
 
-
+```{r plot5, fig.width = 12, fig.height = 6, fig.fullwidth = TRUE}
 # Run function
 fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-patient-longitudinal.pdf")
 p <- create_stacked_barplot(plot_df = tables1, 
@@ -346,8 +353,8 @@ p <- create_stacked_barplot(plot_df = tables1,
                             use_palette = longitudinal_palette, 
                             xtitle ="Brain tumor type and patient case", 
                             legend = tables1$longitudinal,
-                            title_value = caption_value)
-pdf(file = fname, width = 6, height = 5)
+                            title_value = "Summary of samples per brain cancer type, SJUID across disease stages")
+pdf(file = fname, width = 12, height = 6)
 print(p)
 dev.off() 
 ```
