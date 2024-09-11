@@ -1,5 +1,5 @@
 ---
-title: "Data exploratory analysis"
+title: "Create cohort"
 author: "Antonia Chroni <achroni@stjude.org> for St. Jude Children's Research Hospital BioHackathon Team 1"
 output:
   html_document:
@@ -37,7 +37,7 @@ params:
 ```{r logo-file, echo=FALSE}
 attach(params)
 # Insert logo on the top of the html report 
-logo_file <- file.path(root_dir, "img", "chromic-logo.png")
+logo_file <- file.path(root_dir, "figures", "img", "chromic-logo.png")
 htmltools::img(src = knitr::image_uri(logo_file), alt = "logo", style = "position:absolute; top:0; left:0; padding:0px; height:120px;")
 detach(params)
 ```
@@ -100,18 +100,15 @@ h2 {color: var(--chromic_color);
 \pagebreak
 
 # Information about this notebook
-This is an exploratory analysis of the data availability in terms of assays in the Comprehensive Omics Catalogue for Hartwell. This is critical for mitigating duplicate sequencing requests and efforts through Hartwell. This notebook aims to showcase:
-(1) which samples have already been sequenced by Hartwell, and 
-(2) what omics data are available per sample.
+This is an exploratory analysis of the data availability in terms of assays in the Comprehensive Omics Catalogue for Hartwell.
 
-For demo purposes, we subset by human brain tumor samples. We investigate the number of samples per `cancer_type_brain` and `Assay`.
+For demo purposes, we use dummy data cohort and subset by human brain tumor samples. In addition, we generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort. This cohort will be used for further analysis.
 
 # Set up
 
 ```{r load-library, echo=TRUE}
 suppressPackageStartupMessages({
   library(tidyverse)
-  library(flextable)
 })
 ```
 
@@ -120,14 +117,12 @@ suppressPackageStartupMessages({
 ```{r set-dir-and-file-names, echo=TRUE}
 attach(params)
 analysis_dir <- file.path(root_dir, "analyses", "data-exploratory-analysis") 
+input_dir <- file.path(analysis_dir, "input") 
 
 # We will first read in metadata file as we need to define sample_name 
-metadata_file <- file.path(analysis_dir, "input", input_file) # metadata input file
+metadata_file <- file.path(input_dir, input_file) # metadata input file
 
-# File path to `results` directory
-results_dir <- file.path(analysis_dir, "results") 
-if (!dir.exists(results_dir)) {
-  dir.create(results_dir)}
+source(paste0(analysis_dir, "/util/generate-fake-SJUID.R"))
 ```
 
 # Read metadata file
@@ -153,20 +148,11 @@ project_df <- read.csv(metadata_file, stringsAsFactors=FALSE) %>%
   select(Source, Disease, Assay, Omics.Method.Detail, Site, Sub.Group, cancer_type_brain) 
 ```
 
-## Generate SJUID
+## Generate fake SJUID
 
-We will generate random SJUID per brain cancer type as this information is not contained in the current data.
+We will generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort.
 
-```{r generate-SJUID, echo=TRUE}
-# Make this reproducible
-set.seed(2024) 
-
-# create vector of data$Sample.SJUID with some duplicates
-generate_string <- function(length) {
-  chars <- c(LETTERS, LETTERS, 0:9)
-  paste0(sample(chars, length, replace = TRUE), collapse = "")
-}
-
+```{r generate-fake-SJUID, echo=TRUE}
 # Create a smaller set of unique strings, each starting with "SJH"
 unique_strings <- paste0("SJH", sapply(1:80, function(x) generate_string(8)))
 
@@ -186,66 +172,36 @@ bind_df <- cbind(SJUID, cancer_type_brain)  %>%
 df <- project_df %>% 
   left_join(bind_df, by = "cancer_type_brain", relationship = "many-to-many") %>% 
   unique() %>% 
-  mutate(match_id = paste(SJUID, Assay, sep = "_")) %>%
-  distinct(match_id, .keep_all = TRUE) %>%
-  write_tsv(file.path(results_dir, "cohort.tsv")) # save 
+  mutate(match_id_assay = paste(SJUID, Assay, sep = "_")) %>%
+  distinct(match_id_assay, .keep_all = TRUE) 
 
-
-# Number of samples per cancer_type_brain
-assays_number <- length(df$SJUID)
-samples_number <- length(unique(df$SJUID))
+# Save file
+write.csv(df, file.path(input_dir, "cohort.csv"), row.names = FALSE)
 ```
 
-## Number of samples with assay information
+## Generate fake longitudinal data
 
-There are `r samples_number` brain tumor samples with `r assays_number` assays in total.
+We will generate random longitudinal data per SJUID and per brain cancer type as this information is not contained in the demo cohort.
 
-## Number of assays per brain cancer type
+```{r generate-fake-longitudinal-data, echo=TRUE}
+# Generate vector for `cancer_type_brain`
+longitudinal_vec <- c("Diagnosis", "Remission", "Relapse", "Deceased")
+n <- length(df$SJUID)
+longitudinal <- rep(longitudinal_vec, each=n)
 
-```{r, fig.align = "left", results = "asis", message = FALSE, warning = FALSE, echo = FALSE}
-tables1 <- df %>% count(cancer_type_brain)
-cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of assays per brain cancer type"))
-cat("  \n</div>  \n")
-cat("  \n\\pagebreak  \n")
+# Assign `longitudinal` TO df
+#longitudinal_bind_df <- cbind(df, longitudinal) %>% 
+#  as.data.frame()
+
+longitudinal_df <- cbind(df, longitudinal) %>% 
+  #left_join(longitudinal_bind_df, by = "SJUID", relationship = "many-to-many") %>% 
+  unique() %>% 
+  mutate(match_id_longitudinal_assay = paste(SJUID, longitudinal, Assay, sep = "_")) %>%
+  distinct(match_id_longitudinal_assay, .keep_all = TRUE) 
+
+# Save file
+write.csv(longitudinal_df, file.path(input_dir, "cohort-longitudinal.csv"), row.names = FALSE)
 ```
-
-
-# Number of samples per Assay
-
-```{r table-1, echo=FALSE}
-df %>%
-  count(Assay) %>%
-  arrange(desc(n)) %>% 
-  regulartable() %>%
-  fontsize(size = 11, part = "all") 
-```
-
-# Number of samples per brain cancer type and Assay
-
-```{r table-2, echo=FALSE}
-df %>%
-  count(Assay, cancer_type_brain) %>%
-  pivot_wider(names_from = Assay, values_from = n) %>% 
-  regulartable() %>%
-  fontsize(size = 11, part = "all") 
-```
-
-# Number of samples per brain cancer type, Assay, and SJUID
-
-```{r table-3, echo=FALSE}
-df %>%
-  count(Assay, cancer_type_brain, SJUID) %>%
-  pivot_wider(names_from = Assay, values_from = n) %>% 
-  regulartable() %>%
-  fontsize(size = 11, part = "all") 
-```
-
-# Future directions
-
-The current exploratory data analysis module can be expanded by investigating samples with paired assays. Moreover, if other metadata are available, e.g., disease_stage, treatment, this will build large, longitudinal cohorts with multi-omic sequencing data. Such an analysis permits consideration of samples according to the condition(s) of the experiment and research aims. In addition, it can be used to refine research questions and/or generate new ones.
-
-This will facilitate collaboration across departments at St. Jude, expedite discoveries, and find cures for children with cancer and other catastrophic diseases.
 
 ```{r echo=FALSE}
 detach(params)
