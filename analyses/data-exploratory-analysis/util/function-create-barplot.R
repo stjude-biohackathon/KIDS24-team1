@@ -72,3 +72,4 @@ create_stacked_barplot <- function(plot_df, x_value, use_palette, xtitle, legend
 
 
 
+
