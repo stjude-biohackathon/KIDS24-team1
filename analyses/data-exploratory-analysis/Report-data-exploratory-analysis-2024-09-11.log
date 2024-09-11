@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  11 SEP 2024 13:58
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  11 SEP 2024 14:28
  restricted system commands enabled.
 **/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorato
@@ -1418,14 +1418,14 @@ L3 programming layer <2024-03-14>
 
 Here is how much of LuaTeX's memory you used:
  21503 strings out of 476435
- 195466,1977958 words of node,token memory allocated
+ 195464,1977958 words of node,token memory allocated
  612 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 8 
 attribute, 66 glue_spec, 8 attribute_list, 1 write, 1 user_defined nodes
-   avail lists: 1:4,2:6769,3:2588,4:300,5:325,6:1263,7:12703,8:21,9:7936,10:5,11
+   avail lists: 1:5,2:6769,3:2588,4:294,5:327,6:1263,7:12703,8:19,9:7936,10:5,11
 :182
  43180 multiletter control sequences out of 65536+600000
- 65 fonts using 19421339 bytes
+ 65 fonts using 19421491 bytes
  90i,15n,121p,1291b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/texlive/install/20
 24/texmf-dist/fonts/opentype/public/lm/lmmono10-italic.otf></research/rgs01/appl
@@ -1442,7 +1442,7 @@ _apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmroma
 n12-regular.otf></research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/te
 xlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf>
 Output written on Report-data-exploratory-analysis-2024-09-11.pdf (14 pages, 18
-6056 bytes).
+5604 bytes).
 
 PDF statistics: 218 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams
