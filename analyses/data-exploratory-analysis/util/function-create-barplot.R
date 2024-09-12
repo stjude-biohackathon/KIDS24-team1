@@ -55,7 +55,7 @@ create_barplot <- function(plot_df, ylim, x_value, use_palette, xtitle, title_va
 create_stacked_barplot <- function(plot_df, x_value, use_palette, xtitle, legend, title_value) {
 
   # Plot 
-  p <- print(ggplot(plot_df, aes(x = cancer_type_brain, 
+  p <- print(ggplot(plot_df, aes(x = x_value, 
                                  y = n,
                                  fill = legend)) +  
                geom_bar(position="fill", stat="identity") +

@@ -32,6 +32,9 @@ params:
   START_DATE: './'
   COMPLETION_DATE: './'
   input_file: './'
+  cancer_type_order: './'
+  assay_order: './'
+  disease_stage_order: './'
 ---
 
 ```{r logo-file, echo=FALSE}
@@ -152,11 +155,11 @@ samples_number <- length(unique(df$SJUID))
 ```
 
 ```{r re-order-df, echo=TRUE}
-cancer_type_brain_order <- c("Ependymoma", "HGG", "LGG", "Medulloblastoma")
-longitudinal_order <- c("Diagnosis", "Remission", "Relapse", "Deceased")
+cancer_type_brain_order <- cancer_type_order
+longitudinal_order <- disease_stage_order
 
 # Re-order df
-f <- c("WES", "WGBS", "WGS", "RNAseq", "ATACseq", "ChIPseq", "Methylation")# Level df by assay
+f <- assay_order
 df <- df %>% 
   dplyr::mutate(Assay = factor(Assay),
                 Assay = fct_relevel(Assay, f),
@@ -208,7 +211,7 @@ cat("  \n\\pagebreak  \n")
 ylim <- max(tables1$n)
 
 # Run function
-fname <- paste0(figures_plots_dir, "/", "samples-per-assay-longitudinal.pdf")
+fname <- paste0(figures_plots_dir, "/", "samples-per-assay.pdf")
 p <- create_barplot(plot_df = tables1, 
                     ylim = ylim, 
                     x_value = tables1$Assay, 
@@ -241,7 +244,7 @@ cat("  \n\\pagebreak  \n")
 ylim <- max(tables1$n)
 
 # Run function
-fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-assay-longitudinal-overall.pdf")
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-assay-overall-longitudinal.pdf")
 p <- create_barplot(plot_df = tables1, 
                     ylim = ylim, 
                     x_value = tables1$cancer_type_brain, 
@@ -311,66 +314,47 @@ tables1 <- df %>% count(cancer_type_brain, SJUID, longitudinal, Assay) %>%
   as.data.frame() %>%
   mutate_all(funs(replace_na(.,0)))
 
+caption_value = "Summary of cohort per brain cancer type, SJUID, disease stage, and assay"
+
 cat("  \n<div style=\"font-size:80%\">  \n")
-print(knitr::kable(tables1, align = "lcccc", caption = "Summary of samples and assays per brain cancer type, per disease stage, per assay and per SJUID"))
+print(knitr::kable(tables1, align = "lcccc", caption = caption_value))
 cat("  \n</div>  \n")
 cat("  \n\\pagebreak  \n")
 ```
 
-```{r plot4, fig.width = 6, fig.height = 5, fig.fullwidth = TRUE}
+## Plots
+
+```{r plot4, fig.width = 25, fig.height = 6, fig.fullwidth = TRUE}
 tables1 <- df %>% count(cancer_type_brain, SJUID, longitudinal, Assay) %>%
   as.data.frame() %>%
-  mutate_all(funs(replace_na(.,0))) %>%
-  
-  # Add col
-  #add_column(value = "1") %>%
-  mutate(value = case_when(grepl("Diagnosis", longitudinal) ~ "1",
-                           grepl("Remission", longitudinal) ~ "2",
-                           grepl("Relapse", longitudinal) ~ "3",
-                           grepl("Deceased", longitudinal) ~ "4")) %>%
-  arrange(cancer_type_brain, longitudinal, Assay) 
+  arrange(cancer_type_brain, longitudinal, Assay) %>%
+  mutate(match_id_brain = paste(cancer_type_brain, SJUID, sep = "_"),
+         match_id_brain_longitudinal = paste(cancer_type_brain, SJUID, longitudinal, sep = "_")) %>%
+  mutate_all(funs(replace_na(.,0))) 
 
-
-# Dumbbell plot per cancer group
-cancer_groups <- unique(as.character(tables1$cancer_type_brain))
-cancer_groups <- sort(cancer_groups, decreasing = FALSE)
-print(cancer_groups)
-
-for (i in seq_along(cancer_groups)) {
-  print(i)
-  tables1_sub <- tables1 %>% 
-    filter(cancer_type_brain == cancer_groups[i]) %>%
-    arrange(cancer_type_brain, longitudinal, Assay) 
-  
-    # Name plots
-   fname <- paste0(figures_plots_dir, "/", cancer_groups[i], "-cancer-type-brain-per-assay-longitudinal-disease stage.pdf")
-    print(fname)
-    
-    # Run function
-    p <- create_dumbbell_ct(plot_df = tables1_sub, 
-                            x_value = tables1_sub$cancer_type_brain, 
-                            use_palette = longitudinal_palette, 
-                            #legend = tables1_sub$longitudinal,
-                            ct_id = cancer_groups[i])
-    pdf(file = fname, width = 12, height = 8)
-    print(p)
-    dev.off()
-}
-
-
-
-
-
-
-
-# Plot stacked barplot 
-fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-per-assay-longitudinal-disease stage.pdf")
-p <- create_dumbbell_ct(plot_df = tables1, 
-                            x_value = tables1$cancer_type_brain, 
+# Run function
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-per-assay-patient.pdf")
+p <- create_stacked_barplot(plot_df = tables1, 
+                            x_value = tables1$match_id_brain_longitudinal, 
                             use_palette = palette, 
+                            xtitle ="Brain tumor type and patient case", 
                             legend = tables1$Assay,
-                            title_value = caption_value)
-pdf(file = fname, width = 6, height = 5)
+                            title_value = "Summary of samples per brain cancer type, SJUID and disease stages across assays")
+pdf(file = fname, width = 25, height = 6)
+print(p)
+dev.off() 
+```
+
+```{r plot5, fig.width = 12, fig.height = 6, fig.fullwidth = TRUE}
+# Run function
+fname <- paste0(figures_plots_dir, "/", "cancer-type-brain-patient-longitudinal.pdf")
+p <- create_stacked_barplot(plot_df = tables1, 
+                            x_value = tables1$match_id_brain, 
+                            use_palette = longitudinal_palette, 
+                            xtitle ="Brain tumor type and patient case", 
+                            legend = tables1$longitudinal,
+                            title_value = "Summary of samples per brain cancer type, SJUID across disease stages")
+pdf(file = fname, width = 12, height = 6)
 print(p)
 dev.off() 
 ```

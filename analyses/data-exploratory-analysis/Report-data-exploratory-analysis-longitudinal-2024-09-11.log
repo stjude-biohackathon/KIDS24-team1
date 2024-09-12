@@ -2,11 +2,11 @@ This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.26)  1
  restricted system commands enabled.
 **/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorato
-ry-analysis-2024-09-11.tex
+ry-analysis-longitudinal-2024-09-11.tex
 
 (/research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
 ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11.tex
+y-analysis-longitudinal-2024-09-11.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
@@ -715,8 +715,8 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 124.
-(./Report-data-exploratory-analysis-2024-09-11.aux)
-\openout1 = Report-data-exploratory-analysis-2024-09-11.aux
+(./Report-data-exploratory-analysis-longitudinal-2024-09-11.aux)
+\openout1 = Report-data-exploratory-analysis-longitudinal-2024-09-11.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
 LaTeX Font Info:    ... okay on input line 132.
@@ -1087,12 +1087,12 @@ Overfull \hbox (59.68523pt too wide) in paragraph at lines 134--134
  [] 
  []
 
-(./Report-data-exploratory-analysis-2024-09-11.toc)
+(./Report-data-exploratory-analysis-longitudinal-2024-09-11.toc)
 \tf@toc=\write4
 
-\openout4 = Report-data-exploratory-analysis-2024-09-11.toc
+\openout4 = Report-data-exploratory-analysis-longitudinal-2024-09-11.toc
 </research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-team1/
-figures/img/chromic-logo.png, id=17, 444.57pt x 96.36pt>
+figures/img/chromic-logo.png, id=19, 444.57pt x 96.36pt>
 File: /research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-t
 eam1/figures/img/chromic-logo.png Graphic file (type png)
 <use /research/dept/dnb/core_operations/Bioinformatics/achroni/GitHub/KIDS24-te
@@ -1123,283 +1123,1026 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 [3] [4]
 </research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
 ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11_files/figure-latex/plot1-1.pdf, id=59, 401.5pt x 320.1962
-4pt>
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot1-1.pdf, id=63, 401.5
+pt x 320.19624pt>
 File: /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni
 /GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explo
-ratory-analysis-2024-09-11_files/figure-latex/plot1-1.pdf Graphic file (type pd
-f)
+ratory-analysis-longitudinal-2024-09-11_files/figure-latex/plot1-1.pdf Graphic 
+file (type pdf)
 <use /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/
 GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explor
-atory-analysis-2024-09-11_files/figure-latex/plot1-1.pdf>
+atory-analysis-longitudinal-2024-09-11_files/figure-latex/plot1-1.pdf>
 Package luatex.def Info: /research_jude/rgs01_jude/dept/DNB/core_operations/Bio
 informatics/achroni/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plot
-s/Report-data-exploratory-analysis-2024-09-11_files/figure-latex/plot1-1.pdf  u
-sed on input line 319.
+s/Report-data-exploratory-analysis-longitudinal-2024-09-11_files/figure-latex/p
+lot1-1.pdf  used on input line 329.
 (luatex.def)             Requested size: 401.50513pt x 320.20033pt.
 [5</research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11_files/figure-latex/plot1-1.pdf>] [6]
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot1-1.pdf>] [6]
 </research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
 ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11_files/figure-latex/plot2-1.pdf, id=76, 402.50375pt x 320.
-19624pt>
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot2-1.pdf, id=80, 402.5
+0375pt x 320.19624pt>
 File: /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni
 /GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explo
-ratory-analysis-2024-09-11_files/figure-latex/plot2-1.pdf Graphic file (type pd
-f)
+ratory-analysis-longitudinal-2024-09-11_files/figure-latex/plot2-1.pdf Graphic 
+file (type pdf)
 <use /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/
 GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explor
-atory-analysis-2024-09-11_files/figure-latex/plot2-1.pdf>
+atory-analysis-longitudinal-2024-09-11_files/figure-latex/plot2-1.pdf>
 Package luatex.def Info: /research_jude/rgs01_jude/dept/DNB/core_operations/Bio
 informatics/achroni/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plot
-s/Report-data-exploratory-analysis-2024-09-11_files/figure-latex/plot2-1.pdf  u
-sed on input line 378.
+s/Report-data-exploratory-analysis-longitudinal-2024-09-11_files/figure-latex/p
+lot2-1.pdf  used on input line 388.
 (luatex.def)             Requested size: 402.50276pt x 320.19545pt.
 [7</research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11_files/figure-latex/plot2-1.pdf>] [8]
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot2-1.pdf>] [8]
 </research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
 ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11_files/figure-latex/plot3-1.pdf, id=93, 405.515pt x 319.19
-25pt>
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot3-1.pdf, id=97, 405.5
+15pt x 319.1925pt>
 File: /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni
 /GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explo
-ratory-analysis-2024-09-11_files/figure-latex/plot3-1.pdf Graphic file (type pd
-f)
+ratory-analysis-longitudinal-2024-09-11_files/figure-latex/plot3-1.pdf Graphic 
+file (type pdf)
 <use /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/
 GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explor
-atory-analysis-2024-09-11_files/figure-latex/plot3-1.pdf>
+atory-analysis-longitudinal-2024-09-11_files/figure-latex/plot3-1.pdf>
 Package luatex.def Info: /research_jude/rgs01_jude/dept/DNB/core_operations/Bio
 informatics/achroni/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plot
-s/Report-data-exploratory-analysis-2024-09-11_files/figure-latex/plot3-1.pdf  u
-sed on input line 489.
+s/Report-data-exploratory-analysis-longitudinal-2024-09-11_files/figure-latex/p
+lot3-1.pdf  used on input line 499.
 (luatex.def)             Requested size: 405.51399pt x 319.19171pt.
 [9</research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Git
 Hub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
-y-analysis-2024-09-11_files/figure-latex/plot3-1.pdf>]
-Overfull \hbox (2.97101pt too wide) in paragraph at lines 527--528
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot3-1.pdf>]
+Overfull \hbox (3.27327pt too wide) in paragraph at lines 536--537
  []\TU/lmr/m/n/10 WGBS 
  []
 
 
-Overfull \hbox (4.50314pt too wide) in paragraph at lines 531--532
+Overfull \hbox (0.7034pt too wide) in paragraph at lines 538--539
+ []\TU/lmr/m/n/10 WGS 
+ []
+
+
+Overfull \hbox (4.87384pt too wide) in paragraph at lines 540--541
 []\TU/lmr/m/n/10 RNAseq  
  []
 
 
-Overfull \hbox (2.97101pt too wide) in paragraph at lines 549--550
+Overfull \hbox (3.27327pt too wide) in paragraph at lines 558--559
  []\TU/lmr/m/n/10 WGBS 
  []
 
 
-Overfull \hbox (4.50314pt too wide) in paragraph at lines 553--554
-[]\TU/lmr/m/n/10 RNAseq  
+Overfull \hbox (0.7034pt too wide) in paragraph at lines 560--561
+ []\TU/lmr/m/n/10 WGS 
  []
 
 
-Overfull \hbox (15.82625pt too wide) in paragraph at lines 565--565
+Overfull \hbox (4.87384pt too wide) in paragraph at lines 562--563
+[]\TU/lmr/m/n/10 RNAseq  
+ []
+
+[10]
+Overfull \hbox (2.62955pt too wide) in paragraph at lines 613--614
+\TU/lmr/m/n/10 cer_type_brain  
+ []
+
+
+Overfull \hbox (3.41599pt too wide) in paragraph at lines 619--620
+ []\TU/lmr/m/n/10 WES 
+ []
+
+
+Overfull \hbox (7.43932pt too wide) in paragraph at lines 621--622
+ []\TU/lmr/m/n/10 WGBS 
+ []
+
+
+Overfull \hbox (7.8038pt too wide) in paragraph at lines 623--624
+[]\TU/lmr/m/n/10 WGS  
+ []
+
+
+Overfull \hbox (3.2405pt too wide) in paragraph at lines 625--626
+ []\TU/lmr/m/n/10 ChIPseq 
+ []
+
+
+Overfull \hbox (6.07152pt too wide) in paragraph at lines 629--630
+ []\TU/lmr/m/n/10 RNAseq 
+ []
+
+
+Overfull \hbox (2.62955pt too wide) in paragraph at lines 637--638
+\TU/lmr/m/n/10 cer_type_brain  
+ []
+
+
+Overfull \hbox (3.41599pt too wide) in paragraph at lines 643--644
+ []\TU/lmr/m/n/10 WES 
+ []
+
+
+Overfull \hbox (7.43932pt too wide) in paragraph at lines 645--646
+ []\TU/lmr/m/n/10 WGBS 
+ []
+
+
+Overfull \hbox (7.8038pt too wide) in paragraph at lines 647--648
+[]\TU/lmr/m/n/10 WGS  
+ []
+
+
+Overfull \hbox (3.2405pt too wide) in paragraph at lines 649--650
+ []\TU/lmr/m/n/10 ChIPseq 
+ []
+
+
+Overfull \hbox (6.07152pt too wide) in paragraph at lines 653--654
+ []\TU/lmr/m/n/10 RNAseq 
+ []
+
+
+Overfull \hbox (25.4717pt too wide) in paragraph at lines 661--661
  []|\TU/lmr/m/n/10 SJH0H5WYREP| 
  []
 
 
-Overfull \hbox (16.24765pt too wide) in paragraph at lines 566--566
+Overfull \hbox (25.4717pt too wide) in paragraph at lines 662--662
+ []|\TU/lmr/m/n/10 SJH0H5WYREP| 
+ []
+
+
+Overfull \hbox (25.4717pt too wide) in paragraph at lines 663--663
+ []|\TU/lmr/m/n/10 SJH0H5WYREP| 
+ []
+
+
+Overfull \hbox (25.8931pt too wide) in paragraph at lines 664--664
  []|\TU/lmr/m/n/10 SJH2HPPEEKM| 
  []
 
 
-Overfull \hbox (5.74202pt too wide) in paragraph at lines 567--567
+Overfull \hbox (25.8931pt too wide) in paragraph at lines 665--665
+ []|\TU/lmr/m/n/10 SJH2HPPEEKM| 
+ []
+
+
+Overfull \hbox (25.8931pt too wide) in paragraph at lines 666--666
+ []|\TU/lmr/m/n/10 SJH2HPPEEKM| 
+ []
+
+
+Overfull \hbox (25.8931pt too wide) in paragraph at lines 667--667
+ []|\TU/lmr/m/n/10 SJH2HPPEEKM| 
+ []
+
+
+Overfull \hbox (15.38747pt too wide) in paragraph at lines 668--668
  []|\TU/lmr/m/n/10 SJH51B396IW| 
  []
 
 
-Overfull \hbox (7.09305pt too wide) in paragraph at lines 569--569
- []|\TU/lmr/m/n/10 SJHA6KC56J6| 
+Overfull \hbox (15.38747pt too wide) in paragraph at lines 669--669
+ []|\TU/lmr/m/n/10 SJH51B396IW| 
  []
 
 
-Overfull \hbox (8.74084pt too wide) in paragraph at lines 571--571
- []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+Overfull \hbox (15.38747pt too wide) in paragraph at lines 670--670
+ []|\TU/lmr/m/n/10 SJH51B396IW| 
  []
 
 
-Overfull \hbox (13.75706pt too wide) in paragraph at lines 572--572
- []|\TU/lmr/m/n/10 SJHCN03RCVD| 
+Overfull \hbox (15.38747pt too wide) in paragraph at lines 671--671
+ []|\TU/lmr/m/n/10 SJH51B396IW| 
  []
 
 
-Overfull \hbox (7.78046pt too wide) in paragraph at lines 576--576
- []|\TU/lmr/m/n/10 SJHI8CC7QT8| 
- []
-
-
-Overfull \hbox (16.06747pt too wide) in paragraph at lines 579--579
- []|\TU/lmr/m/n/10 SJHKYUIYAME| 
- []
-
-
-Overfull \hbox (14.60126pt too wide) in paragraph at lines 581--581
- []|\TU/lmr/m/n/10 SJHUMKP2L6V| 
- []
-
-
-Overfull \hbox (14.71889pt too wide) in paragraph at lines 582--582
- []|\TU/lmr/m/n/10 SJHXTBTQ5ZT| 
- []
-
-
-Overfull \hbox (11.19086pt too wide) in paragraph at lines 583--583
+Overfull \hbox (20.8363pt too wide) in paragraph at lines 672--672
  []|\TU/lmr/m/n/10 SJH5HCKPC97| 
  []
 
 
-Overfull \hbox (11.32806pt too wide) in paragraph at lines 584--584
+Overfull \hbox (20.8363pt too wide) in paragraph at lines 673--673
+ []|\TU/lmr/m/n/10 SJH5HCKPC97| 
+ []
+
+
+Overfull \hbox (20.8363pt too wide) in paragraph at lines 674--674
+ []|\TU/lmr/m/n/10 SJH5HCKPC97| 
+ []
+
+
+Overfull \hbox (20.97351pt too wide) in paragraph at lines 675--675
  []|\TU/lmr/m/n/10 SJH98QNKIUU| 
  []
 
 
-Overfull \hbox (13.23906pt too wide) in paragraph at lines 585--585
- []|\TU/lmr/m/n/10 SJH5QHZM4US| 
+Overfull \hbox (20.97351pt too wide) in paragraph at lines 676--676
+ []|\TU/lmr/m/n/10 SJH98QNKIUU| 
  []
 
 
-Overfull \hbox (14.87566pt too wide) in paragraph at lines 586--586
- []|\TU/lmr/m/n/10 SJHADL5OJME| 
+Overfull \hbox (20.97351pt too wide) in paragraph at lines 677--677
+ []|\TU/lmr/m/n/10 SJH98QNKIUU| 
  []
 
 
-Overfull \hbox (14.84486pt too wide) in paragraph at lines 588--588
- []|\TU/lmr/m/n/10 SJHBL7CDYRN| 
+Overfull \hbox (16.7385pt too wide) in paragraph at lines 682--682
+ []|\TU/lmr/m/n/10 SJHA6KC56J6| 
  []
 
 
-Overfull \hbox (17.57907pt too wide) in paragraph at lines 590--590
- []|\TU/lmr/m/n/10 SJHEOVURBMJ| 
+Overfull \hbox (16.7385pt too wide) in paragraph at lines 683--683
+ []|\TU/lmr/m/n/10 SJHA6KC56J6| 
  []
 
 
-Overfull \hbox (11.87685pt too wide) in paragraph at lines 592--592
- []|\TU/lmr/m/n/10 SJHHW23UJ9P| 
+Overfull \hbox (16.7385pt too wide) in paragraph at lines 684--684
+ []|\TU/lmr/m/n/10 SJHA6KC56J6| 
  []
 
 
-Overfull \hbox (9.01524pt too wide) in paragraph at lines 593--593
- []|\TU/lmr/m/n/10 SJHJ59RLHSU| 
+Overfull \hbox (16.7385pt too wide) in paragraph at lines 685--685
+ []|\TU/lmr/m/n/10 SJHA6KC56J6| 
  []
 
 
-Overfull \hbox (11.87683pt too wide) in paragraph at lines 595--595
- []|\TU/lmr/m/n/10 SJHMI643DMD| 
+Overfull \hbox (4.22389pt too wide) in paragraph at lines 686--686
+ \TU/lmr/m/n/10 BKS7QSFO| 
  []
 
 
-Overfull \hbox (13.78784pt too wide) in paragraph at lines 596--596
- []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+Overfull \hbox (4.22389pt too wide) in paragraph at lines 687--687
+ \TU/lmr/m/n/10 BKS7QSFO| 
  []
 
 
-Overfull \hbox (9.15245pt too wide) in paragraph at lines 598--598
- []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+Overfull \hbox (4.22389pt too wide) in paragraph at lines 688--688
+ \TU/lmr/m/n/10 BKS7QSFO| 
  []
 
 
-Overfull \hbox (13.18025pt too wide) in paragraph at lines 599--599
- []|\TU/lmr/m/n/10 SJHEQG3P4FK| 
+Overfull \hbox (4.22389pt too wide) in paragraph at lines 689--689
+ \TU/lmr/m/n/10 BKS7QSFO| 
  []
 
 
-Overfull \hbox (12.21983pt too wide) in paragraph at lines 601--601
- []|\TU/lmr/m/n/10 SJH2W47P7DG| 
- []
-
-
-Overfull \hbox (14.08788pt too wide) in paragraph at lines 602--602
- []|\TU/lmr/m/n/10 SJHAY4GX4AN| 
- []
-
-
-Overfull \hbox (14.31706pt too wide) in paragraph at lines 604--604
- []|\TU/lmr/m/n/10 SJHBV3Q6UVR| 
- []
-
-
-Overfull \hbox (12.14145pt too wide) in paragraph at lines 607--607
- []|\TU/lmr/m/n/10 SJHI52BLNWK| 
- []
-
-
-Overfull \hbox (10.22906pt too wide) in paragraph at lines 610--610
- []|\TU/lmr/m/n/10 SJHOY05OJJN| 
- []
-
-
-Overfull \hbox (13.78784pt too wide) in paragraph at lines 611--611
- []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
- []
-
-
-Overfull \hbox (9.15245pt too wide) in paragraph at lines 613--613
- []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
- []
-
-
-Overfull \hbox (15.23306pt too wide) in paragraph at lines 614--614
- []|\TU/lmr/m/n/10 SJHWS0NRZVA| 
- []
-
-
-Overfull \hbox (18.39249pt too wide) in paragraph at lines 615--615
- []|\TU/lmr/m/n/10 SJHXIKCWNKY| 
- []
-
-
-Overfull \hbox (14.66986pt too wide) in paragraph at lines 617--617
- []|\TU/lmr/m/n/10 SJHZW7GYEF9| 
- []
-
-
-Overfull \hbox (11.19086pt too wide) in paragraph at lines 618--618
- []|\TU/lmr/m/n/10 SJH5HCKPC97| 
- []
-
-
-Overfull \hbox (8.74084pt too wide) in paragraph at lines 619--619
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 690--690
  []|\TU/lmr/m/n/10 SJHC70DZRJS| 
  []
 
 
-Overfull \hbox (12.62166pt too wide) in paragraph at lines 623--623
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 691--691
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 692--692
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 693--693
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (23.40251pt too wide) in paragraph at lines 694--694
+ []|\TU/lmr/m/n/10 SJHCN03RCVD| 
+ []
+
+
+Overfull \hbox (23.40251pt too wide) in paragraph at lines 695--695
+ []|\TU/lmr/m/n/10 SJHCN03RCVD| 
+ []
+
+
+Overfull \hbox (23.40251pt too wide) in paragraph at lines 696--696
+ []|\TU/lmr/m/n/10 SJHCN03RCVD| 
+ []
+
+
+Overfull \hbox (8.44911pt too wide) in paragraph at lines 704--704
+ \TU/lmr/m/n/10 HZH67WMF| 
+ []
+
+
+Overfull \hbox (8.44911pt too wide) in paragraph at lines 705--705
+ \TU/lmr/m/n/10 HZH67WMF| 
+ []
+
+
+Overfull \hbox (17.4259pt too wide) in paragraph at lines 706--706
+ []|\TU/lmr/m/n/10 SJHI8CC7QT8| 
+ []
+
+
+Overfull \hbox (17.4259pt too wide) in paragraph at lines 707--707
+ []|\TU/lmr/m/n/10 SJHI8CC7QT8| 
+ []
+
+
+Overfull \hbox (17.4259pt too wide) in paragraph at lines 708--708
+ []|\TU/lmr/m/n/10 SJHI8CC7QT8| 
+ []
+
+
+Overfull \hbox (17.4259pt too wide) in paragraph at lines 709--709
+ []|\TU/lmr/m/n/10 SJHI8CC7QT8| 
+ []
+
+
+Overfull \hbox (0.91731pt too wide) in paragraph at lines 714--714
+ []|\TU/lmr/m/n/10 SJHKVQE- 
+ []
+
+
+Overfull \hbox (0.91731pt too wide) in paragraph at lines 715--715
+ []|\TU/lmr/m/n/10 SJHKVQE- 
+ []
+
+
+Overfull \hbox (0.91731pt too wide) in paragraph at lines 716--716
+ []|\TU/lmr/m/n/10 SJHKVQE- 
+ []
+
+
+Overfull \hbox (25.71292pt too wide) in paragraph at lines 717--717
+ []|\TU/lmr/m/n/10 SJHKYUIYAME| 
+ []
+
+
+Overfull \hbox (25.71292pt too wide) in paragraph at lines 718--718
+ []|\TU/lmr/m/n/10 SJHKYUIYAME| 
+ []
+
+
+Overfull \hbox (25.71292pt too wide) in paragraph at lines 719--719
+ []|\TU/lmr/m/n/10 SJHKYUIYAME| 
+ []
+
+
+Overfull \hbox (24.2467pt too wide) in paragraph at lines 724--724
+ []|\TU/lmr/m/n/10 SJHUMKP2L6V| 
+ []
+
+
+Overfull \hbox (24.2467pt too wide) in paragraph at lines 725--725
+ []|\TU/lmr/m/n/10 SJHUMKP2L6V| 
+ []
+
+
+Overfull \hbox (24.2467pt too wide) in paragraph at lines 726--726
+ []|\TU/lmr/m/n/10 SJHUMKP2L6V| 
+ []
+
+
+Overfull \hbox (24.36433pt too wide) in paragraph at lines 727--727
+ []|\TU/lmr/m/n/10 SJHXTBTQ5ZT| 
+ []
+
+
+Overfull \hbox (24.36433pt too wide) in paragraph at lines 728--728
+ []|\TU/lmr/m/n/10 SJHXTBTQ5ZT| 
+ []
+
+
+Overfull \hbox (24.36433pt too wide) in paragraph at lines 729--729
+ []|\TU/lmr/m/n/10 SJHXTBTQ5ZT| 
+ []
+
+
+Overfull \hbox (24.36433pt too wide) in paragraph at lines 730--730
+ []|\TU/lmr/m/n/10 SJHXTBTQ5ZT| 
+ []
+
+
+Overfull \hbox (22.8845pt too wide) in paragraph at lines 731--731
+ []|\TU/lmr/m/n/10 SJH5QHZM4US| 
+ []
+
+
+Overfull \hbox (22.8845pt too wide) in paragraph at lines 732--732
+ []|\TU/lmr/m/n/10 SJH5QHZM4US| 
+ []
+
+
+Overfull \hbox (22.8845pt too wide) in paragraph at lines 733--733
+ []|\TU/lmr/m/n/10 SJH5QHZM4US| 
+ []
+
+
+Overfull \hbox (22.8845pt too wide) in paragraph at lines 734--734
+ []|\TU/lmr/m/n/10 SJH5QHZM4US| 
+ []
+
+
+Overfull \hbox (24.5211pt too wide) in paragraph at lines 735--735
+ []|\TU/lmr/m/n/10 SJHADL5OJME| 
+ []
+
+
+Overfull \hbox (24.5211pt too wide) in paragraph at lines 736--736
+ []|\TU/lmr/m/n/10 SJHADL5OJME| 
+ []
+
+
+Overfull \hbox (24.5211pt too wide) in paragraph at lines 737--737
+ []|\TU/lmr/m/n/10 SJHADL5OJME| 
+ []
+
+
+Overfull \hbox (24.5211pt too wide) in paragraph at lines 738--738
+ []|\TU/lmr/m/n/10 SJHADL5OJME| 
+ []
+
+
+Overfull \hbox (2.8631pt too wide) in paragraph at lines 739--739
+ \TU/lmr/m/n/10 BISK5KBU| 
+ []
+
+
+Overfull \hbox (2.8631pt too wide) in paragraph at lines 740--740
+ \TU/lmr/m/n/10 BISK5KBU| 
+ []
+
+
+Overfull \hbox (2.8631pt too wide) in paragraph at lines 741--741
+ \TU/lmr/m/n/10 BISK5KBU| 
+ []
+
+
+Overfull \hbox (24.49031pt too wide) in paragraph at lines 742--742
+ []|\TU/lmr/m/n/10 SJHBL7CDYRN| 
+ []
+
+
+Overfull \hbox (24.49031pt too wide) in paragraph at lines 743--743
+ []|\TU/lmr/m/n/10 SJHBL7CDYRN| 
+ []
+
+
+Overfull \hbox (24.49031pt too wide) in paragraph at lines 744--744
+ []|\TU/lmr/m/n/10 SJHBL7CDYRN| 
+ []
+
+
+Overfull \hbox (24.49031pt too wide) in paragraph at lines 745--745
+ []|\TU/lmr/m/n/10 SJHBL7CDYRN| 
+ []
+
+
+Overfull \hbox (27.22452pt too wide) in paragraph at lines 748--748
+ []|\TU/lmr/m/n/10 SJHEOVURBMJ| 
+ []
+
+
+Overfull \hbox (27.22452pt too wide) in paragraph at lines 749--749
+ []|\TU/lmr/m/n/10 SJHEOVURBMJ| 
+ []
+
+
+Overfull \hbox (27.22452pt too wide) in paragraph at lines 750--750
+ []|\TU/lmr/m/n/10 SJHEOVURBMJ| 
+ []
+
+
+Overfull \hbox (27.22452pt too wide) in paragraph at lines 751--751
+ []|\TU/lmr/m/n/10 SJHEOVURBMJ| 
+ []
+
+
+Overfull \hbox (22.8257pt too wide) in paragraph at lines 752--752
+ []|\TU/lmr/m/n/10 SJHEQG3P4FK| 
+ []
+
+
+Overfull \hbox (22.8257pt too wide) in paragraph at lines 753--753
+ []|\TU/lmr/m/n/10 SJHEQG3P4FK| 
+ []
+
+
+Overfull \hbox (21.5223pt too wide) in paragraph at lines 758--758
+ []|\TU/lmr/m/n/10 SJHHW23UJ9P| 
+ []
+
+
+Overfull \hbox (21.5223pt too wide) in paragraph at lines 759--759
+ []|\TU/lmr/m/n/10 SJHHW23UJ9P| 
+ []
+
+
+Overfull \hbox (18.66069pt too wide) in paragraph at lines 760--760
+ []|\TU/lmr/m/n/10 SJHJ59RLHSU| 
+ []
+
+
+Overfull \hbox (18.66069pt too wide) in paragraph at lines 761--761
+ []|\TU/lmr/m/n/10 SJHJ59RLHSU| 
+ []
+
+
+Overfull \hbox (18.66069pt too wide) in paragraph at lines 762--762
+ []|\TU/lmr/m/n/10 SJHJ59RLHSU| 
+ []
+
+
+Overfull \hbox (18.66069pt too wide) in paragraph at lines 763--763
+ []|\TU/lmr/m/n/10 SJHJ59RLHSU| 
+ []
+
+
+Overfull \hbox (21.52228pt too wide) in paragraph at lines 768--768
+ []|\TU/lmr/m/n/10 SJHMI643DMD| 
+ []
+
+
+Overfull \hbox (21.52228pt too wide) in paragraph at lines 769--769
+ []|\TU/lmr/m/n/10 SJHMI643DMD| 
+ []
+
+
+Overfull \hbox (21.52228pt too wide) in paragraph at lines 770--770
+ []|\TU/lmr/m/n/10 SJHMI643DMD| 
+ []
+
+
+Overfull \hbox (21.52228pt too wide) in paragraph at lines 771--771
+ []|\TU/lmr/m/n/10 SJHMI643DMD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 772--772
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 773--773
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 774--774
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 775--775
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 783--783
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 784--784
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 785--785
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 786--786
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (21.86528pt too wide) in paragraph at lines 787--787
+ []|\TU/lmr/m/n/10 SJH2W47P7DG| 
+ []
+
+
+Overfull \hbox (21.86528pt too wide) in paragraph at lines 788--788
+ []|\TU/lmr/m/n/10 SJH2W47P7DG| 
+ []
+
+
+Overfull \hbox (21.86528pt too wide) in paragraph at lines 789--789
+ []|\TU/lmr/m/n/10 SJH2W47P7DG| 
+ []
+
+
+Overfull \hbox (21.86528pt too wide) in paragraph at lines 790--790
+ []|\TU/lmr/m/n/10 SJH2W47P7DG| 
+ []
+
+
+Overfull \hbox (20.8363pt too wide) in paragraph at lines 791--791
+ []|\TU/lmr/m/n/10 SJH5HCKPC97| 
+ []
+
+
+Overfull \hbox (20.8363pt too wide) in paragraph at lines 792--792
+ []|\TU/lmr/m/n/10 SJH5HCKPC97| 
+ []
+
+
+Overfull \hbox (20.8363pt too wide) in paragraph at lines 793--793
+ []|\TU/lmr/m/n/10 SJH5HCKPC97| 
+ []
+
+
+Overfull \hbox (23.73332pt too wide) in paragraph at lines 794--794
+ []|\TU/lmr/m/n/10 SJHAY4GX4AN| 
+ []
+
+
+Overfull \hbox (23.73332pt too wide) in paragraph at lines 795--795
+ []|\TU/lmr/m/n/10 SJHAY4GX4AN| 
+ []
+
+
+Overfull \hbox (23.73332pt too wide) in paragraph at lines 796--796
+ []|\TU/lmr/m/n/10 SJHAY4GX4AN| 
+ []
+
+
+Overfull \hbox (23.73332pt too wide) in paragraph at lines 797--797
+ []|\TU/lmr/m/n/10 SJHAY4GX4AN| 
+ []
+
+
+Overfull \hbox (23.96251pt too wide) in paragraph at lines 801--801
+ []|\TU/lmr/m/n/10 SJHBV3Q6UVR| 
+ []
+
+
+Overfull \hbox (23.96251pt too wide) in paragraph at lines 802--802
+ []|\TU/lmr/m/n/10 SJHBV3Q6UVR| 
+ []
+
+
+Overfull \hbox (23.96251pt too wide) in paragraph at lines 803--803
+ []|\TU/lmr/m/n/10 SJHBV3Q6UVR| 
+ []
+
+
+Overfull \hbox (23.96251pt too wide) in paragraph at lines 804--804
+ []|\TU/lmr/m/n/10 SJHBV3Q6UVR| 
+ []
+
+
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 805--805
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 806--806
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 807--807
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (18.38629pt too wide) in paragraph at lines 808--808
+ []|\TU/lmr/m/n/10 SJHC70DZRJS| 
+ []
+
+
+Overfull \hbox (3.13753pt too wide) in paragraph at lines 809--809
+ \TU/lmr/m/n/10 CLGFJTIG| 
+ []
+
+
+Overfull \hbox (3.13753pt too wide) in paragraph at lines 810--810
+ \TU/lmr/m/n/10 CLGFJTIG| 
+ []
+
+
+Overfull \hbox (3.13753pt too wide) in paragraph at lines 811--811
+ \TU/lmr/m/n/10 CLGFJTIG| 
+ []
+
+
+Overfull \hbox (3.13753pt too wide) in paragraph at lines 812--812
+ \TU/lmr/m/n/10 CLGFJTIG| 
+ []
+
+
+Overfull \hbox (21.7869pt too wide) in paragraph at lines 815--815
+ []|\TU/lmr/m/n/10 SJHI52BLNWK| 
+ []
+
+
+Overfull \hbox (21.7869pt too wide) in paragraph at lines 816--816
+ []|\TU/lmr/m/n/10 SJHI52BLNWK| 
+ []
+
+
+Overfull \hbox (21.7869pt too wide) in paragraph at lines 817--817
+ []|\TU/lmr/m/n/10 SJHI52BLNWK| 
+ []
+
+
+Overfull \hbox (21.7869pt too wide) in paragraph at lines 818--818
+ []|\TU/lmr/m/n/10 SJHI52BLNWK| 
+ []
+
+
+Overfull \hbox (19.87451pt too wide) in paragraph at lines 830--830
+ []|\TU/lmr/m/n/10 SJHOY05OJJN| 
+ []
+
+
+Overfull \hbox (19.87451pt too wide) in paragraph at lines 831--831
+ []|\TU/lmr/m/n/10 SJHOY05OJJN| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 832--832
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 833--833
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 834--834
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (23.43329pt too wide) in paragraph at lines 835--835
+ []|\TU/lmr/m/n/10 SJHQBOPS9FD| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 840--840
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 841--841
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 842--842
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (18.7979pt too wide) in paragraph at lines 843--843
+ []|\TU/lmr/m/n/10 SJHVIS5Q8HX| 
+ []
+
+
+Overfull \hbox (24.87851pt too wide) in paragraph at lines 844--844
+ []|\TU/lmr/m/n/10 SJHWS0NRZVA| 
+ []
+
+
+Overfull \hbox (24.87851pt too wide) in paragraph at lines 845--845
+ []|\TU/lmr/m/n/10 SJHWS0NRZVA| 
+ []
+
+
+Overfull \hbox (24.87851pt too wide) in paragraph at lines 846--846
+ []|\TU/lmr/m/n/10 SJHWS0NRZVA| 
+ []
+
+
+Overfull \hbox (28.03793pt too wide) in paragraph at lines 847--847
+ []|\TU/lmr/m/n/10 SJHXIKCWNKY| 
+ []
+
+
+Overfull \hbox (28.03793pt too wide) in paragraph at lines 848--848
+ []|\TU/lmr/m/n/10 SJHXIKCWNKY| 
+ []
+
+
+Overfull \hbox (28.03793pt too wide) in paragraph at lines 849--849
+ []|\TU/lmr/m/n/10 SJHXIKCWNKY| 
+ []
+
+
+Overfull \hbox (28.03793pt too wide) in paragraph at lines 850--850
+ []|\TU/lmr/m/n/10 SJHXIKCWNKY| 
+ []
+
+
+Overfull \hbox (24.3153pt too wide) in paragraph at lines 855--855
+ []|\TU/lmr/m/n/10 SJHZW7GYEF9| 
+ []
+
+
+Overfull \hbox (24.3153pt too wide) in paragraph at lines 856--856
+ []|\TU/lmr/m/n/10 SJHZW7GYEF9| 
+ []
+
+
+Overfull \hbox (24.3153pt too wide) in paragraph at lines 857--857
+ []|\TU/lmr/m/n/10 SJHZW7GYEF9| 
+ []
+
+
+Overfull \hbox (24.3153pt too wide) in paragraph at lines 858--858
+ []|\TU/lmr/m/n/10 SJHZW7GYEF9| 
+ []
+
+
+Overfull \hbox (3.78029pt too wide) in paragraph at lines 859--859
+ []|\TU/lmr/m/n/10 SJH77NRD- 
+ []
+
+
+Overfull \hbox (3.78029pt too wide) in paragraph at lines 860--860
+ []|\TU/lmr/m/n/10 SJH77NRD- 
+ []
+
+
+Overfull \hbox (3.78029pt too wide) in paragraph at lines 861--861
+ []|\TU/lmr/m/n/10 SJH77NRD- 
+ []
+
+
+Overfull \hbox (3.78029pt too wide) in paragraph at lines 862--862
+ []|\TU/lmr/m/n/10 SJH77NRD- 
+ []
+
+
+Overfull \hbox (22.2671pt too wide) in paragraph at lines 867--867
  []|\TU/lmr/m/n/10 SJHC1QST5GR| 
  []
 
 
-Overfull \hbox (10.92624pt too wide) in paragraph at lines 626--626
+Overfull \hbox (22.2671pt too wide) in paragraph at lines 868--868
+ []|\TU/lmr/m/n/10 SJHC1QST5GR| 
+ []
+
+
+Overfull \hbox (22.2671pt too wide) in paragraph at lines 869--869
+ []|\TU/lmr/m/n/10 SJHC1QST5GR| 
+ []
+
+
+Overfull \hbox (2.24432pt too wide) in paragraph at lines 870--870
+ \TU/lmr/m/n/10 CYGKSDY| 
+ []
+
+
+Overfull \hbox (2.24432pt too wide) in paragraph at lines 871--871
+ \TU/lmr/m/n/10 CYGKSDY| 
+ []
+
+
+Overfull \hbox (2.24432pt too wide) in paragraph at lines 872--872
+ \TU/lmr/m/n/10 CYGKSDY| 
+ []
+
+
+Overfull \hbox (2.24432pt too wide) in paragraph at lines 873--873
+ \TU/lmr/m/n/10 CYGKSDY| 
+ []
+
+
+Overfull \hbox (20.57169pt too wide) in paragraph at lines 878--878
  []|\TU/lmr/m/n/10 SJHQS0D51KH| 
  []
 
 
-Overfull \hbox (14.32686pt too wide) in paragraph at lines 627--627
+Overfull \hbox (20.57169pt too wide) in paragraph at lines 879--879
+ []|\TU/lmr/m/n/10 SJHQS0D51KH| 
+ []
+
+
+Overfull \hbox (20.57169pt too wide) in paragraph at lines 880--880
+ []|\TU/lmr/m/n/10 SJHQS0D51KH| 
+ []
+
+
+Overfull \hbox (20.57169pt too wide) in paragraph at lines 881--881
+ []|\TU/lmr/m/n/10 SJHQS0D51KH| 
+ []
+
+
+Overfull \hbox (23.9723pt too wide) in paragraph at lines 882--882
  []|\TU/lmr/m/n/10 SJHXVMEU21L| 
  []
 
 
-Overfull \hbox (18.11807pt too wide) in paragraph at lines 628--628
+Overfull \hbox (23.9723pt too wide) in paragraph at lines 883--883
+ []|\TU/lmr/m/n/10 SJHXVMEU21L| 
+ []
+
+
+Overfull \hbox (23.9723pt too wide) in paragraph at lines 884--884
+ []|\TU/lmr/m/n/10 SJHXVMEU21L| 
+ []
+
+
+Overfull \hbox (23.9723pt too wide) in paragraph at lines 885--885
+ []|\TU/lmr/m/n/10 SJHXVMEU21L| 
+ []
+
+
+Overfull \hbox (27.76352pt too wide) in paragraph at lines 886--886
  []|\TU/lmr/m/n/10 SJHY4W1ZWCY| 
  []
 
-[10] [11] [12]
-Overfull \hbox (144.49498pt too wide) in paragraph at lines 695--695
+
+Overfull \hbox (27.76352pt too wide) in paragraph at lines 887--887
+ []|\TU/lmr/m/n/10 SJHY4W1ZWCY| 
+ []
+
+
+Overfull \hbox (27.76352pt too wide) in paragraph at lines 888--888
+ []|\TU/lmr/m/n/10 SJHY4W1ZWCY| 
+ []
+
+
+Overfull \hbox (27.76352pt too wide) in paragraph at lines 889--889
+ []|\TU/lmr/m/n/10 SJHY4W1ZWCY| 
+ []
+
+
+Overfull \hbox (1.4675pt too wide) in paragraph at lines 890--890
+ []|\TU/lmr/m/n/10 SJHZ40PT- 
+ []
+
+
+Overfull \hbox (1.4675pt too wide) in paragraph at lines 891--891
+ []|\TU/lmr/m/n/10 SJHZ40PT- 
+ []
+
+
+Overfull \hbox (1.4675pt too wide) in paragraph at lines 892--892
+ []|\TU/lmr/m/n/10 SJHZ40PT- 
+ []
+
+
+Overfull \hbox (1.4675pt too wide) in paragraph at lines 893--893
+ []|\TU/lmr/m/n/10 SJHZ40PT- 
+ []
+
+[11] [12] [13] [14] [15] [16] [17] [18]
+</research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
+ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot4-1.pdf, id=149, 1775
+.63374pt x 391.4625pt>
+File: /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni
+/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explo
+ratory-analysis-longitudinal-2024-09-11_files/figure-latex/plot4-1.pdf Graphic 
+file (type pdf)
+<use /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/
+GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explor
+atory-analysis-longitudinal-2024-09-11_files/figure-latex/plot4-1.pdf>
+Package luatex.def Info: /research_jude/rgs01_jude/dept/DNB/core_operations/Bio
+informatics/achroni/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plot
+s/Report-data-exploratory-analysis-longitudinal-2024-09-11_files/figure-latex/p
+lot4-1.pdf  used on input line 939.
+(luatex.def)             Requested size: 469.75497pt x 103.56384pt.
+</research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitH
+ub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorator
+y-analysis-longitudinal-2024-09-11_files/figure-latex/plot5-1.pdf, id=150, 836.
+12375pt x 391.4625pt>
+File: /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni
+/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explo
+ratory-analysis-longitudinal-2024-09-11_files/figure-latex/plot5-1.pdf Graphic 
+file (type pdf)
+<use /research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/
+GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explor
+atory-analysis-longitudinal-2024-09-11_files/figure-latex/plot5-1.pdf>
+Package luatex.def Info: /research_jude/rgs01_jude/dept/DNB/core_operations/Bio
+informatics/achroni/GitHub/KIDS24-team1/analyses/data-exploratory-analysis/plot
+s/Report-data-exploratory-analysis-longitudinal-2024-09-11_files/figure-latex/p
+lot5-1.pdf  used on input line 967.
+(luatex.def)             Requested size: 469.76985pt x 219.94026pt.
+[19</research_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/Gi
+tHub/KIDS24-team1/analyses/data-exploratory-analysis/plots/Report-data-explorato
+ry-analysis-longitudinal-2024-09-11_files/figure-latex/plot4-1.pdf>] [20</resear
+ch_jude/rgs01_jude/dept/DNB/core_operations/Bioinformatics/achroni/GitHub/KIDS24
+-team1/analyses/data-exploratory-analysis/plots/Report-data-exploratory-analysis
+-longitudinal-2024-09-11_files/figure-latex/plot5-1.pdf>]
+Overfull \hbox (144.49498pt too wide) in paragraph at lines 1042--1042
 []\TU/lmtt/m/n/10 ## BLAS:   /research/rgs01/applications/hpcf/authorized_apps/r
 hel8_apps/lapack/3.10.1/install/lib64/libblas.so.3.10.1[] 
  []
 
 
-Overfull \hbox (154.99498pt too wide) in paragraph at lines 695--695
+Overfull \hbox (154.99498pt too wide) in paragraph at lines 1042--1042
 []\TU/lmtt/m/n/10 ## LAPACK: /research/rgs01/applications/hpcf/authorized_apps/r
 hel8_apps/lapack/3.10.1/install/lib64/liblapack.so.3.10.1[] 
  []
 
-[13] (./Report-data-exploratory-analysis-2024-09-11.aux)
+[21] (./Report-data-exploratory-analysis-longitudinal-2024-09-11.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1407,16 +2150,16 @@ L3 programming layer <2024-03-14>
 )
 
 Here is how much of LuaTeX's memory you used:
- 21502 strings out of 476435
- 195462,1977958 words of node,token memory allocated
+ 21538 strings out of 476435
+ 745705,1977958 words of node,token memory allocated
  612 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 8 
 attribute, 66 glue_spec, 8 attribute_list, 1 write, 1 user_defined nodes
-   avail lists: 1:5,2:6585,3:2516,4:295,5:325,6:1227,7:12347,8:19,9:7712,10:5,11
-:178
- 43180 multiletter control sequences out of 65536+600000
- 65 fonts using 19421415 bytes
- 90i,15n,121p,1291b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:6,2:24631,3:8255,4:320,5:346,6:4042,7:42336,8:23,9:25259,10:5,
+11:1080
+ 43199 multiletter control sequences out of 65536+600000
+ 65 fonts using 19421491 bytes
+ 90i,15n,121p,1476b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/texlive/install/20
 24/texmf-dist/fonts/opentype/public/lm/lmmono10-italic.otf></research/rgs01/appl
 ications/hpcf/authorized_apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/o
@@ -1431,11 +2174,11 @@ ntype/public/lm/lmroman12-bold.otf></research/rgs01/applications/hpcf/authorized
 _apps/rhel8_apps/texlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmroma
 n12-regular.otf></research/rgs01/applications/hpcf/authorized_apps/rhel8_apps/te
 xlive/install/2024/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf>
-Output written on Report-data-exploratory-analysis-2024-09-11.pdf (13 pages, 18
-5023 bytes).
+Output written on Report-data-exploratory-analysis-longitudinal-2024-09-11.pdf (
+21 pages, 225667 bytes).
 
-PDF statistics: 214 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 131072)
- 97 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 277 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 131072)
+ 113 words of extra memory for PDF output out of 10000 (max. 100000000)
 
