@@ -1,5 +1,8 @@
 # KIDS24-team1
 
+* THIS BRANCH CONTAINS `./services/` from the first version of [CHROMIC](https://chromic.stjude.org). This now has removed in private repo. 
+
+
 The `KIDS24-team1` repository contains:
 (1) Django API and webclient framework [CHROMIC](https://chromic.stjude.org) (Comprehensive Omics Catalogue for Hartwell), and
 (2) code and results with a demo example to perform an exploratory analysis of the data availability in terms of assays in the CHROMIC. 
