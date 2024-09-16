@@ -1,0 +1,275 @@
+---
+title: "Create cohort"
+author: "Antonia Chroni <achroni@stjude.org> for St. Jude Children's Research Hospital BioHackathon Team 1"
+output:
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    df_print: paged
+    code_folding: hide
+    toc_depth: 6
+    highlight: tango
+    number_sections: TRUE
+  pdf_document:
+    toc: TRUE
+    highlight: tango
+    number_sections: TRUE
+    latex_engine: lualatex
+    keep_tex: FALSE
+always_allow_html: TRUE
+urlcolor: blue
+linkcolor: black
+citecolor: blue
+geometry: margin=1in
+header-includes: 
+  - \usepackage{titling}
+  - \usepackage{fancyhdr}
+params:
+  root_dir: './'
+  PROJECT_NAME: './'
+  LEAD_ANALYSTS: './'
+  CONTACT_EMAIL: './'
+  START_DATE: './'
+  COMPLETION_DATE: './'
+  input_file: './'
+---
+
+```{r logo-file, echo=FALSE}
+attach(params)
+# Insert logo on the top of the html report 
+logo_file <- file.path(root_dir, "figures", "img", "chromic-logo.png")
+htmltools::img(src = knitr::image_uri(logo_file), alt = "logo", style = "position:absolute; top:0; left:0; padding:0px; height:120px;")
+detach(params)
+```
+
+\addtolength{\headheight}{2.0cm} 
+\fancypagestyle{plain}{} 
+\thispagestyle{fancy}
+\fancyhead[L]{\includegraphics[height=120px]{`r logo_file`}}
+\renewcommand{\headrulewidth}{0pt}
+
+<style type="text/css">
+:root { --chromic_color: #17818F;}
+
+h1.title {margin-top: 130px;
+  margin-bottom: 25px;
+  font-size: 36px;}
+
+.nobullet li {list-style-type: none;}
+
+.reporthead {font-size: 20px;}
+
+body { /* Normal */
+  font-size: 16px;
+  font-style: Arial, Helvetica, sans-serif;}
+
+h1 {
+  color: var(--chromic_color);
+  font-size: 28px;
+  margin-top: 50px;}
+
+h2 {color: var(--chromic_color);
+  font-size: 20px;}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+  background-color: var(--chromic_color);}
+</style>
+
+<a href="https://wiki.stjude.org/display/CAB">
+
+</a>
+
+\pagebreak
+
+<div class="reporthead"><br/>
+**Project: `r params$PROJECT_NAME`**  
+
+<br />  
+
+**St. Jude Children's Research Hospital BioHackathon Team 1**
+<br />  
+
+
+>Date started: `r params$START_DATE`
+<br />
+>Date completed:  `r params$COMPLETION_DATE`
+<br />
+>Report generated: `r format(Sys.time(), '%H:%M:%S %Z %m/%d/%Y')` \
+
+</div>
+\pagebreak
+
+# Information about this notebook
+This is an exploratory analysis of the data availability in terms of assays in the Comprehensive Omics Catalogue for Hartwell.
+
+For demo purposes, we use dummy data cohort and subset by human brain tumor samples. In addition, we generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort. This cohort will be used for further analysis.
+
+# Set up
+
+```{r load-library, echo=TRUE}
+suppressPackageStartupMessages({
+  library(tidyverse)
+})
+```
+
+# Directories and paths to file Inputs/Outputs
+
+```{r set-dir-and-file-names, echo=TRUE}
+attach(params)
+analysis_dir <- file.path(root_dir, "analyses", "data-exploratory-analysis") 
+input_dir <- file.path(analysis_dir, "input") 
+
+# We will first read in metadata file as we need to define sample_name 
+metadata_file <- file.path(input_dir, input_file) # metadata input file
+
+source(paste0(analysis_dir, "/util/generate-fake-SJUID.R"))
+```
+
+# Read metadata file
+
+We will subset by human brain tumor samples.
+
+```{r read-process-metadata, echo=TRUE}
+# Read metadata
+project_df <- read.csv(metadata_file, stringsAsFactors=FALSE) %>%
+  
+  # Add cancer_type_brain: Ependymoma, HGG, LGG, Medulloblastoma
+  add_column(cancer_type_brain = "other") %>%
+  mutate(cancer_type_brain = case_when(grepl("Ependymoma", Disease) ~ "Ependymoma",
+                                     grepl("HGG", Disease) ~ "HGG",
+                                     grepl("LGG", Disease) ~ "LGG",
+                                     grepl("MedulloBlastoma", Disease) ~ "Medulloblastoma"),
+         Assay = Omics.Method) %>%
+  mutate(across(where(is.character), ~ na_if(.,""))) %>% # Omics Method for NA
+  filter(!cancer_type_brain == "other",
+         !is.na(cancer_type_brain),
+         !is.na(Omics.Method),
+         Source == "Human") %>% 
+  select(Source, Disease, Assay, Omics.Method.Detail, Site, Sub.Group, cancer_type_brain) 
+```
+
+## Generate fake SJUID
+
+We will generate random fake SJUID per brain cancer type as this information is not contained in the demo cohort.
+
+```{r generate-fake-SJUID, echo=TRUE}
+# Create a smaller set of unique strings, each starting with "SJH"
+unique_strings <- paste0("SJH", sapply(1:80, function(x) generate_string(8)))
+
+# Sample from this set to create a vector of 100 strings, allowing duplicates
+SJUID <- sample(unique_strings, 100, replace = TRUE)
+
+# Generate vector for `cancer_type_brain`
+cancer_type_brain_vec <- c("Ependymoma", "HGG", "LGG", "Medulloblastoma")
+n <- 25 # random number
+cancer_type_brain <- rep(cancer_type_brain_vec, each=n)
+
+# Assign `SJUID` to `cancer_type_brain`
+bind_df <- cbind(SJUID, cancer_type_brain)  %>% 
+  as.data.frame()
+
+# Merge both df
+df <- project_df %>% 
+  left_join(bind_df, by = "cancer_type_brain", relationship = "many-to-many") %>% 
+  unique() %>% 
+  mutate(match_id_assay = paste(SJUID, Assay, sep = "_")) %>%
+  distinct(match_id_assay, .keep_all = TRUE) %>%
+  add_column(samples_drop = "keep") %>%
+  mutate(samples_drop = case_when(grepl("SJH5HCKPC97", SJUID) & grepl("WES", Assay) ~ "drop",
+                                  grepl("SJH98QNKIUU", SJUID) & grepl("WES", Assay) ~ "drop",
+                                  grepl("SJH0H5WYREP", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHKYUIYAME", SJUID) & grepl("Methylation", Assay) ~ "drop",
+                                  grepl("SJHFGGJRHYO", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHKVQEBOCP", SJUID) & grepl("Methylation", Assay) ~ "drop",
+                                  grepl("SJHUMKP2L6V", SJUID) & grepl("ATACseq", Assay) ~ "drop",
+                                  grepl("SJHCN03RCVD", SJUID) & grepl("ATACseq", Assay) ~ "drop",
+                                  grepl("SJHBNJSZHW6", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHDDTE0SYL", SJUID) & grepl("Methylation|ATACseq", Assay) ~ "drop",
+                                  grepl("SJHWS0NRZVA", SJUID) & grepl("WGS", Assay) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("WGS", Assay) ~ "drop",
+                                  grepl("SJHHW23UJ9P", SJUID) & grepl("ATACseq|WGS", Assay) ~ "drop",
+                                  grepl("SJHBISK5KBU", SJUID) & grepl("WGS", Assay) ~ "drop",
+                                  grepl("SJHROJUQZAP", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHC1QST5GR", SJUID) & grepl("ATACseq", Assay) ~ "drop",
+                                  grepl("SJHHZH67WMF", SJUID) & grepl("ATACseq|ChIPseq", Assay) ~ "drop",
+                                  grepl("SJH8HIE3P0P", SJUID) & grepl("Methylation|ChIPseq|RNAseq", Assay) ~ "drop",
+                                  grepl("SJHZZLRCGJ6", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("ChIPseq", Assay) ~ "drop",
+                                  grepl("SJHNPJTQHIT", SJUID) & grepl("RNAseq", Assay) ~ "drop",
+                                  grepl("SJHEQG3P4FK", SJUID) & grepl("RNAseq|WES", Assay) ~ "drop",
+                                  TRUE ~ samples_drop)) %>%
+  filter(samples_drop == "keep") %>%
+  select(!samples_drop) 
+
+# Save file
+write.csv(df, file.path(input_dir, "cohort.csv"), row.names = FALSE)
+```
+
+## Generate fake longitudinal data
+
+We will generate random longitudinal data per SJUID and per brain cancer type as this information is not contained in the demo cohort.
+
+```{r generate-fake-longitudinal-data, echo=TRUE}
+# Generate vector for `cancer_type_brain`
+longitudinal_vec <- c("Diagnosis", "Remission", "Relapse", "Deceased")
+n <- length(df$SJUID)
+longitudinal <- rep(longitudinal_vec, each=n)
+
+# Assign `longitudinal` TO df
+#longitudinal_bind_df <- cbind(df, longitudinal) %>% 
+#  as.data.frame()
+
+longitudinal_df <- cbind(df, longitudinal) %>% 
+  unique() %>% 
+  mutate(match_id_longitudinal_assay = paste(SJUID, longitudinal, Assay, sep = "_")) %>%
+  mutate(match_id_longitudinal = paste(SJUID, longitudinal, sep = "_")) %>%
+  distinct(match_id_longitudinal_assay, .keep_all = TRUE) 
+
+# Select random SJUID and longitudinal and create uneven longitudinal information/SJUID
+# list <- unique(longitudinal_df$SJUID)
+# list
+
+filter_longitudinal_df <-longitudinal_df %>%
+  add_column(samples_drop = "keep") %>%
+  mutate(samples_drop = case_when(grepl("SJH5HCKPC97", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJH98QNKIUU", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJH0H5WYREP", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHKYUIYAME", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHFGGJRHYO", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHKVQEBOCP", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHUMKP2L6V", SJUID) & grepl("Relapse", longitudinal) ~ "drop",
+                                  grepl("SJHCN03RCVD", SJUID) & grepl("Relapse", longitudinal) ~ "drop",
+                                  grepl("SJHBNJSZHW6", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHDDTE0SYL", SJUID) & grepl("Remission|Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHWS0NRZVA", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHHW23UJ9P", SJUID) & grepl("Diagnosis|Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHBISK5KBU", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHROJUQZAP", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHC1QST5GR", SJUID) & grepl("Diagnosis", longitudinal) ~ "drop",
+                                  grepl("SJHHZH67WMF", SJUID) & grepl("Diagnosis|Remission", longitudinal) ~ "drop",
+                                  grepl("SJH8HIE3P0P", SJUID) & grepl("Diagnosis|Remission|Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHZZLRCGJ6", SJUID) & grepl("Deceased", longitudinal) ~ "drop",
+                                  grepl("SJHOY05OJJN", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHNPJTQHIT", SJUID) & grepl("Remission", longitudinal) ~ "drop",
+                                  grepl("SJHEQG3P4FK", SJUID) & grepl("Remission|Deceased", longitudinal) ~ "drop",
+                                  TRUE ~ samples_drop)) %>%
+  filter(samples_drop == "keep") %>%
+  select(!samples_drop) 
+
+# Save file
+write.csv(filter_longitudinal_df, file.path(input_dir, "cohort-longitudinal.csv"), row.names = FALSE)
+```
+
+```{r echo=FALSE}
+detach(params)
+```
+
+\pagebreak
+
+# Session Info
+
+```{r echo=FALSE}
+sessionInfo()
+```
+
